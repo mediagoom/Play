@@ -170,7 +170,7 @@
 </SegmentTimeline>
 </SegmentTemplate><Representation id="1_audio_1" bandwidth="96000" audioSamplingRate="44100"/>
 
-</AdaptationSet><AdaptationSet id="2" group="2" profiles="ccff" bitstreamSwitching="false" segmentAlignment="true" contentType="video" mimeType="video/mp4"  codecs="avc1.4D011F" maxWidth="1280" maxHeight="720" startWithSAP="1" >
+</AdaptationSet><AdaptationSet id="2" group="2" profiles="ccff" bitstreamSwitching="false" segmentAlignment="true" contentType="video" mimeType="video/mp4"  codecs="avc1.4d401e" maxWidth="1280" maxHeight="720" startWithSAP="1" >
 <SegmentTemplate timescale="10000000" media="video_$Bandwidth$_$Time$.m4v" initialization="video_$Bandwidth$_i.m4v" >
 <SegmentTimeline>
 <S d="20000000" t="1000000" />
