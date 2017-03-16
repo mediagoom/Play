@@ -69,6 +69,7 @@
     <script src="scripts/bootstrap.min.js"></script>
     
     
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     
@@ -293,7 +294,8 @@
                     window.setTimeout(function () { playhere_async(autoplay, options, autouri); }, 100);
                     return;
                 }
-
+                
+                options2UI(); 
                 playhere(autoplay, options, autouri);
 
             }
@@ -530,8 +532,12 @@
 
                                        
                     var src = getParamValuesByName('src');
+                    if(null != src)
+                    {
                         src = src.replace(/%3D/g, '=');
                         src = src.replace(/%20/g, ' ');
+
+                    }
                         
                     var autouri  = getParamValuesByName('autouri');
                     var player   = getParamValuesByName('player');

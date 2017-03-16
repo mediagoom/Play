@@ -1,0 +1,27 @@
+{
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run watch-js & npm run serve",
+    "watch-js": "watchify -d -p [ browserify-livereload --host 127.0.0.1 --port 1337 ] -t [ babelify --presets [ es2015 ] ] src/main.js -o src/bundle.js -v",
+    "serve": "http-server -o",
+    "karma": "node ./node_modules/karma/bin/karma start"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.0",
+    "babelify": "^7.3.0",
+    "browserify-livereload": "^1.0.8",
+    "chai": "^3.5.0",
+    "http-server": "^0.9.0",
+    "karma": "^1.5.0",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-firefox-launcher": "^1.0.1",
+    "karma-mocha": "^1.3.0",
+    "mocha": "^3.2.0",
+    "urijs": "^1.18.9",
+    "watchify": "^3.7.0"
+  },
+  "dependencies": {
+    "dashjs": "^2.4.1"
+  }
+}
