@@ -47,7 +47,7 @@ export default class dashpack extends EventEmitter {
         this.dashplayer = null;
     }
 
-    play(url, videotagid, autoplay)
+    play(url, videotagid, poster, autoplay)
     {
         dodash(this, url, videotagid, autoplay);
     }

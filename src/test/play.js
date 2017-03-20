@@ -26,9 +26,8 @@ describe('Player', function() {
     document.body.removeChild(document.getElementById('info'));
   });
     
-
-    it('has dashjs', function(done) {
-        
+    function test_player(done)
+    {
         var p = window.mgPlayer();
             
             p.on("started", function() { 
@@ -59,15 +58,27 @@ describe('Player', function() {
 
                   }, 15000);
             });
-            
-            p.playdash(TEST_URL + '/index.mpd');
 
-             //window.setTimeout(function(){ done(); }, 5000);
+            return p;
+        
+    }
+    it('dashjs', function(done) {
+        
+            let p = test_player(done); 
+            if(p.detector.HLSNative())
+            {
+                p.playhls(TEST_URL + '/main.m3u8');
+            }
+            else
+            {
+                p.playdash(TEST_URL + '/index.mpd');
+            }
 
-
-            //expect('h').to.be.equal(p.innerHTML);
+             
         
     });
+
+    
 
     it('detector' , function(){
         var p = window.mgPlayer();
@@ -75,7 +86,7 @@ describe('Player', function() {
         expect( p.detector.Video5() ).to.be.equal(true);
         expect( p.detector.H264() ).to.be.equal(true);
         expect( p.detector.MediaExtension() ).to.be.equal(true);
-        expect( p.detector.HLSNative() ).to.be.equal(false);
+        //expect(  ).to.be.equal(false);
 
         
             

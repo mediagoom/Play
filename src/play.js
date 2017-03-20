@@ -1,5 +1,6 @@
 import { EventEmitter } from "events";
 import dashpack from './dashpack';
+import videopack from './videopack';
 import detector from './detector';
 
 
@@ -103,20 +104,45 @@ export default class mgPlayer extends EventEmitter {
         this.detector = new detector();
     }
 
-    playdash(url, poster)
+    _loadplayer(player, url, poster)
     {
        let v5 = html5embed(null, poster, this.options.id, this.options.controls, this.options.autoplay);
        let div = document.getElementById(this.options.hostid);
            div.innerHTML = v5;
 
-       //dodash(this, url, this.options.id, this.options.autoplay);
-       //
-
-       this.player = new dashpack();
+       this.player = player;
        registerevents(this);
        
        this.player.play(url, this.options.id, poster, this.options.autoplay);
-      
+    }
+
+    playdash(url, poster)
+    {
+
+       if(!this.detector.MediaExtension())
+           throw new Error('No MSE support detected');
+
+       this._loadplayer( new dashpack(), url, poster );
+    }
+
+    playhls(url, poster)
+    {
+        if(this.detector.HLSNative())
+        {
+            this._loadplayer( new videopack(), url, poster );
+            return;
+        }
+        else
+        {
+            if(this.detector.MediaExtension())
+                throw new Error('MSE HLS not supported yet');
+
+            return;
+        }
+
+
+        throw new Error('HLS not supported');
+
     }
 
     pause()
