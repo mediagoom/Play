@@ -97,6 +97,20 @@ describe('Player', function() {
         
     });
 
+    it('status.json', function(done) {
+        
+        var info = {
+            
+            "hls3":"dash/main.m3u8",
+            "dash":"dash/index.mpd"
+    
+        };
+
+        var p = test_player(done);
+            p.play(TEST_URL, info);
+    
+    });
+
     
 
     

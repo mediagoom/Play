@@ -1,0 +1,13 @@
+
+/node_modules/*
+/scripts/*
+/src/*
+/style/*
+.babelrc
+browserlist*
+/index.js*
+/karma*
+*.html
+web.config
+*~
+/img/*
