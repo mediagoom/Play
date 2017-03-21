@@ -1,9 +1,11 @@
-'use strict';
+//'use strict';
 
-const TEST_URL = 'http://play.mediagoom.com/dash';
+var TEST_URL = 'http://play.mediagoom.com/dash';
 
 function log(msg)
 {
+    console.log(msg);
+
     var h = document.getElementById("info");
     var t = h.innerHTML + '<br>' + msg;
     h.innerHTML = t;
@@ -29,6 +31,8 @@ describe('Player', function() {
     function test_player(done)
     {
         var p = window.mgPlayer();
+
+         
             
             p.on("started", function() { 
                   window.setTimeout(function()
@@ -43,7 +47,7 @@ describe('Player', function() {
 
                        p.pause();
 
-                       let t1 = p.time();
+                       var t1 = p.time();
 
                        window.setTimeout(function(){
 
@@ -62,9 +66,24 @@ describe('Player', function() {
             return p;
         
     }
+
+
+    it('detector' , function(){
+        
+        var p = window.mgPlayer();
+
+        expect( p.detector.Video5() ).to.be.equal(true);
+        expect( p.detector.H264() ).to.be.equal(true);
+        expect( p.detector.MediaExtension() || p.detector.HLSNative() ).to.be.equal(true);
+        //expect(  ).to.be.equal(false);
+
+        
+            
+    });
+
     it('dashjs', function(done) {
         
-            let p = test_player(done); 
+            var p = test_player(done); 
             if(p.detector.HLSNative())
             {
                 p.playhls(TEST_URL + '/main.m3u8');
@@ -80,17 +99,7 @@ describe('Player', function() {
 
     
 
-    it('detector' , function(){
-        var p = window.mgPlayer();
-
-        expect( p.detector.Video5() ).to.be.equal(true);
-        expect( p.detector.H264() ).to.be.equal(true);
-        expect( p.detector.MediaExtension() ).to.be.equal(true);
-        //expect(  ).to.be.equal(false);
-
-        
-            
-    });
+    
 
 
 });

@@ -1,0 +1,3 @@
+{  
+  "SL_safari_Mac_10.12_10":{"base": "SauceLabs", "browserName": "safari", "version": "10", "platform": "Mac 10.12"}  
+} 
