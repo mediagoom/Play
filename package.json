@@ -46,9 +46,10 @@
     "saucelabs": "^1.4.0",
     "saucelabs-finder": "0.0.0-alpha",
     "urijs": "^1.18.9",
-    "watchify": "^3.7.0"
+    "watchify": "^3.7.0",
+    "dashjs": "^2.4.1"
   },
   "dependencies": {
-    "dashjs": "^2.4.1"
+    
   }
 }

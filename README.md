@@ -1,12 +1,22 @@
 # Play
-This is the repository for the MediaGoom sample Player
+This is the repository for the MediaGoom Player. mgplay.
 
 ----------
 
-[PLAY]: https://cdn.rawgit.com/mediagoom/Play/v0.0.4/index.html?src=https://cdn.rawgit.com/mediagoom/Play/v0.0.4/bb "Media Goom Sample Player"
+# Installation
+```bash
+npm install mgplay --save-dev
+```
 
-[TAR]: https://dl.dropboxusercontent.com/u/33964970/bbb_sunflower_1080p_60fps_normal.tar "sample files"
+# Usage
+In nodejs project packaged for the browser using either browserify or WebPack:
+```javascript
+var mgplay = require('mgplay');
 
-Online test [player][PLAY]
-Online [sample files][TAR] 
+```
+
+
+
+
+
 
