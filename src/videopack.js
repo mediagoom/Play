@@ -8,6 +8,7 @@ function dovideo(myself,    src
     
         
     myself.videoplayer = document.querySelector("#" + id);
+    myself.videoplayer.src = url;
     
 
     if (null == autoplay)
@@ -27,9 +28,10 @@ function dovideo(myself,    src
         
     };
     
-
+    /*
     if(autoplay)
         myself.videoplayer.play();
+    */
 
 }
 

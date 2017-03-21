@@ -1,12 +1,34 @@
 {
+  "name": "mgplay",
+  "version": "0.0.1",
+  "description": "The mg player",
   "main": "index.js",
   "scripts": {
     "dev": "npm run watch-js & npm run serve",
     "watch-js": "watchify -d -p [ browserify-livereload --host 127.0.0.1 --port 1337 ] -t [ babelify --presets [ es2015 ] ] src/main.js -o src/bundle.js -v",
     "serve": "http-server -o",
-    "karma": "node ./node_modules/karma/bin/karma start"
+    "karma": "node ./node_modules/karma/bin/karma start",
+    "test": "node ./node_modules/karma/bin/karma start --single-run --no-auto-watch",
+    "souce": "node ./node_modules/karma/bin/karma start ./karma.conf.soucelabs.js",
+    "package": "browserify src/play.js --standalone mgplay --debug -t [ babelify --presets [ es2015 ] ] | exorcist index.js.map > index.js",
+    "build-dev": "browserify -t [ babelify ] src/main.js -o src/bundle.js -v"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mediagoom/play.git"
+  },
+  "keywords": [
+    "upload",
+    "chunk"
+  ],
+  "author": "admin@mediagoom.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mediagoom/play/issues"
+  },
+  "homepage": "https://github.com/mediagoom/play#readme",
   "devDependencies": {
+    "babel-plugin-transform-object-assign": "^6.22.0",
     "babel-preset-es2015": "^6.24.0",
     "babelify": "^7.3.0",
     "browserify-livereload": "^1.0.8",
@@ -15,9 +37,14 @@
     "karma": "^1.5.0",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^2.0.0",
+    "karma-edge-launcher": "^0.4.0",
     "karma-firefox-launcher": "^1.0.1",
+    "karma-ie-launcher": "^1.0.0",
     "karma-mocha": "^1.3.0",
+    "karma-sauce-launcher": "^1.1.0",
     "mocha": "^3.2.0",
+    "saucelabs": "^1.4.0",
+    "saucelabs-finder": "0.0.0-alpha",
     "urijs": "^1.18.9",
     "watchify": "^3.7.0"
   },
