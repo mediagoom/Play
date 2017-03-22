@@ -1,6 +1,6 @@
 {
   "name": "mgplay",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "The mg player",
   "main": "index.js",
   "scripts": {
@@ -48,8 +48,8 @@
     "urijs": "^1.18.9",
     "watchify": "^3.7.0",
     "dashjs": "^2.4.1"
-  },
-  "dependencies": {
-    
   }
+ 
+    
+  
 }
