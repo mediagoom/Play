@@ -1,6 +1,6 @@
 //'use strict';
 
-var TEST_URL = 'http://play.mediagoom.com/dash';
+var TEST_URL = 'https://defgroupdisks.blob.core.windows.net/builds/PLAY/STATIC';
 
 function log(msg)
 {
@@ -31,40 +31,50 @@ describe('Player', function() {
     function test_player(done)
     {
         var p = window.mgPlayer();
-
-         
+        var started = false;
             
-            p.on("started", function() { 
-                  window.setTimeout(function()
-                  {
-                       //console.log("TIME1", p.time());
-                       //
-                       expect((p.time() > 0)).to.be.equal(true);
-                       
-                       log("TIME1 " + p.time());
-                       log("ClearKey " + p.detector.drm['org.w3.clearkey']);
-                       log("PlayReady " + p.detector.drm['com.microsoft.playready']);
+        p.on("started", function() { 
+            log("starting playing")
+            started = true;
+        });
 
-                       p.pause();
+        var p1 = -1;
+        var p2 = -2;
 
-                       var t1 = p.time();
+        window.setTimeout(function()
+        {
+                 //console.log("TIME1", p.time());
+                 //
+                 
+                 p1 = p.time();
+                 
+                 log("TIME1 " +  p1 + " " + started);
+                 log("ClearKey " + p.detector.drm['org.w3.clearkey']);
+                 log("PlayReady " + p.detector.drm['com.microsoft.playready']);
 
-                       window.setTimeout(function(){
+                 //expect(started).to.be.equal(true);
+                 expect((p1 > 0)).to.be.equal(true);
+                 
+                 p.pause();
 
-                           expect(( (t1 + 1) > p.time()) ).to.be.equal(true);
+                 var t1 = p.time();
 
-                           log("TIME2 " + p.time());
-                           
-                           done();
-                          
+                window.setTimeout(function(){
 
-                       }, 3000);
+                    p2 = p.time();
 
-                  }, 15000);
-            });
+                    log("TIME2 " + p2);
 
-            return p;
-        
+                    expect(( (t1 + 1) > p2) ).to.be.equal(true);
+
+                    done();
+                                   
+
+            }, 1000);
+
+        }, 15000);
+
+        return p;
     }
 
 
@@ -76,9 +86,6 @@ describe('Player', function() {
         expect( p.detector.H264() ).to.be.equal(true);
         expect( p.detector.MediaExtension() || p.detector.HLSNative() ).to.be.equal(true);
         //expect(  ).to.be.equal(false);
-
-        
-            
     });
 
     it('dashjs', function(done) {
@@ -93,6 +100,8 @@ describe('Player', function() {
                 p.playdash(TEST_URL + '/index.mpd');
             }
 
+            log('dahsjs test playing');
+
              
         
     });
@@ -101,8 +110,8 @@ describe('Player', function() {
         
         var info = {
             
-            "hls3":"dash/main.m3u8",
-            "dash":"dash/index.mpd"
+            "hls3":"STATIC/main.m3u8",
+            "dash":"STATIC/index.mpd"
     
         };
 
