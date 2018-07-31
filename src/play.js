@@ -9,20 +9,29 @@ function html5embed(
       src
     , poster
     , id
-    , controls
-    , autoplay
-    , cssclass
+    , options
     ){
+
+    let defopt = {
+        autoplay : true
+        , controls : true
+        , cssclass : null
+        , muted : false
+    };
+
+    let opt = Object.assign(defopt, options);
+
+    
 
     var obj  = '<video '
         obj += ' id="';
         obj += id
         obj += '" ';
 
-    if(null != cssclass)
+    if(null != opt.cssclass)
     {
         obj += ' class="';
-        obj += cssclass
+        obj += opt.cssclass
         obj += '" ';
     }
     else
@@ -33,7 +42,7 @@ function html5embed(
     }
     
 
-    if (controls)
+    if (opt.controls)
         obj += 'controls';
 
     if (null != poster)
@@ -43,10 +52,13 @@ function html5embed(
         obj += '"';
     }
 
-    if (true == autoplay) {
+    if (true == opt.autoplay) {
         obj += ' autoPlay';
     }
-       
+
+    if (true == opt.muted) {
+        obj += ' muted';
+    }       
     
     obj += '>';
 
@@ -85,6 +97,7 @@ export default class mgPlayer extends EventEmitter {
             , id     : 'player'
             , hostid : 'playerhost'
             , controls : true
+            , muted : false
         };
 
         this.options = Object.assign(defopt, options);
@@ -115,7 +128,7 @@ export default class mgPlayer extends EventEmitter {
 
     _loadplayer(player, url, poster)
     {
-       let v5 = html5embed(null, poster, this.options.id, this.options.controls, this.options.autoplay);
+       let v5 = html5embed(null, poster, this.options.id, this.options);
        let div = document.getElementById(this.options.hostid);
            div.innerHTML = v5;
 

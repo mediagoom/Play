@@ -2,6 +2,16 @@
 
 var TEST_URL = 'https://defgroupdisks.blob.core.windows.net/builds/PLAY/STATIC';
 
+function testuri()
+{
+    console.log(__karma__.config.args);
+    
+    if(__karma__.config.testuri)
+        return __karma__.config.testuri;
+
+    return TEST_URL;
+}
+
 function log(msg)
 {
     console.log(msg);
@@ -30,7 +40,11 @@ describe('Player', function() {
     
     function test_player(done)
     {
-        var p = window.mgPlayer();
+        //let mute the player so should 
+        //not incur in blocking
+        const options = {muted: true};
+
+        var p = window.mgPlayer(options);
         var started = false;
             
         p.on("started", function() { 
@@ -46,28 +60,28 @@ describe('Player', function() {
                  //console.log("TIME1", p.time());
                  //
                  
-                 p1 = p.time();
-                 
-                 log("TIME1 " +  p1 + " " + started);
-                 log("ClearKey " + p.detector.drm['org.w3.clearkey']);
-                 log("PlayReady " + p.detector.drm['com.microsoft.playready']);
+            p1 = p.time();
+            
+            log("TIME1 " +  p1 + " " + started);
+            log("ClearKey " + p.detector.drm['org.w3.clearkey']);
+            log("PlayReady " + p.detector.drm['com.microsoft.playready']);
 
-                 //expect(started).to.be.equal(true);
-                 expect((p1 > 0)).to.be.equal(true);
-                 
-                 p.pause();
+            //expect(started).to.be.equal(true);
+            expect((p1 > 0)).to.be.equal(true);
+            
+            p.pause();
 
-                 var t1 = p.time();
+            var t1 = p.time();
 
-                window.setTimeout(function(){
+            window.setTimeout(function(){
 
-                    p2 = p.time();
+            p2 = p.time();
 
-                    log("TIME2 " + p2);
+            log("TIME2 " + p2);
 
-                    expect(( (t1 + 1) > p2) ).to.be.equal(true);
+            expect(( (t1 + 1) > p2) ).to.be.equal(true);
 
-                    done();
+            done();
                                    
 
             }, 1000);
@@ -93,11 +107,11 @@ describe('Player', function() {
             var p = test_player(done); 
             if(p.detector.HLSNative())
             {
-                p.playhls(TEST_URL + '/main.m3u8');
+                p.playhls(testuri() + '/main.m3u8');
             }
             else
             {
-                p.playdash(TEST_URL + '/index.mpd');
+                p.playdash(testuri() + '/index.mpd');
             }
 
             log('dahsjs test playing');
@@ -116,7 +130,7 @@ describe('Player', function() {
         };
 
         var p = test_player(done);
-            p.play(TEST_URL, info);
+            p.play(testuri(), info);
     
     });
 
