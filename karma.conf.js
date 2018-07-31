@@ -7,6 +7,8 @@ module.exports = function(config) {
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
 
+    
+
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
@@ -72,6 +74,12 @@ module.exports = function(config) {
         mocha: {
             timeout : 60000 // 60 seconds - upped from 2 seconds
         }
+        // Example passing through `args`.
+      , args: config.foo ? ["--foo"] : [],
+
+      // It is also possible to just pass stuff like this,
+      // but this works only with `karma start`, not `karma run`.
+      testuri: config.testuri
     }
 
     , browserDisconnectTimeout: 40000 // 120 seconds
