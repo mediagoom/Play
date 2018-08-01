@@ -20,7 +20,8 @@ build: off
 install:
   - sh : sudo curl -sS -o - https://dl-ssl.google.com/linux/linux_signing_key.pub > google.key
   - sh : sudo apt-key add google.key
-  - sh : sudo echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list
+  - sh : sudo echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> google-chrome.list
+  - sh : sudo cp google-chrome.list /etc/apt/sources.list.d
   - sh : sudo apt-get -y update
   - sh : sudo apt-get -y install google-chrome-stable
 
