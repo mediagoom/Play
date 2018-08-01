@@ -1,0 +1,83 @@
+
+# version format
+version: 0.0.{build}
+
+# Maximum number of concurrent jobs for the project
+max_jobs: 1
+
+#---------------------------------#
+#    environment configuration    #
+#---------------------------------#
+
+# Build worker image (VM template)
+image: 
+  - Visual Studio 2015
+  - Ubuntu
+
+
+# to run your custom scripts instead of automatic MSBuild
+build_script:
+  - ps: npm install
+  - ps: npm run package
+  - ps: npm run bundle
+#---------------------------------#
+#       tests configuration       #
+#---------------------------------#
+
+# to run your custom scripts instead of automatic tests
+test_script:
+  - ps: npm test
+
+#---------------------------------#
+#      artifacts configuration    #
+#---------------------------------#
+
+artifacts:
+        - path: './index.html'
+          name: index.html
+        - path: './play.html'
+          name: 'play.html'
+        - path: './src/bundle.js'
+          name: 'bundle.js'
+        - path: './scripts/jquery-1.9.0.min.js'
+          name: jquery-1.9.0.min.js
+        - path: './scripts/bootstrap.min.js'
+          name: bootstrap.min.js
+        - path: './img/MediaGoom.png'
+          name: MediaGoom.png
+
+
+#---------------------------------#
+#     deployment configuration    #
+#---------------------------------#
+
+# providers: Local, FTP, WebDeploy, AzureCS, AzureBlob, S3, NuGet, Environment
+# provider names are case-sensitive!
+deploy:
+  - provider: AzureBlob
+    storage_account_name: defgroupdisks
+    storage_access_key:
+        secure: 7X0QuwNaLFt6pZbICyXLo4GLXRNkr81jQiyeyHty8JVewLab06xgRFb0O/lsefRnEEUyahuW4nbQ4eM0qciypNzxfsnyqUfpvbueZysU6DrFuejXQX8CCesOtlTjfKHE
+    container: builds
+    folder: PLAYER\$(APPVEYOR_BUILD_WORKER_IMAGE)
+    artifact: index.html,play.html,bundle.js,jquery-1.9.0.min.js,bootstrap.min.js,MediaGoom.png
+    unzip: false
+    set_content_type: false
+
+#---------------------------------#
+#         notifications           #
+#---------------------------------#
+
+notifications:
+
+  # Email
+  - provider: Email
+    to:
+      - aseduto@hotmail.com
+    subject: 'Build {{status}}'                  # optional
+    message: "{{message}}, {{commitId}}, ..."    # optional
+    #on_build_status_changed: true
+
+ 
+
+
