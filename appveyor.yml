@@ -14,6 +14,14 @@ image:
   - Visual Studio 2015
   - Ubuntu
 
+build: off
+
+# Install Chrome.
+install:
+  - sh : sudo curl -sS -o - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add
+  - sh : sudo echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list
+  - sh : sudo apt-get -y update
+  - sh : sudo apt-get -y install google-chrome-stable
 
 # to run your custom scripts instead of automatic MSBuild
 build_script:
@@ -26,7 +34,8 @@ build_script:
 
 # to run your custom scripts instead of automatic tests
 test_script:
-  - npm test
+  - cmd: npm test -- --browsers "Firefox,Chrome,IE"
+  - sh: npm test -- --browsers "ChromeHeadless"
 
 #---------------------------------#
 #      artifacts configuration    #
@@ -45,6 +54,10 @@ artifacts:
           name: bootstrap.min.js
         - path: './img/MediaGoom.png'
           name: MediaGoom.png
+        - path: './style/bootstrap.min.css'
+          name: bootstrap.min.css
+        - path: './play.json'
+          name: play.json
 
 
 #---------------------------------#
@@ -60,7 +73,7 @@ deploy:
         secure: 7X0QuwNaLFt6pZbICyXLo4GLXRNkr81jQiyeyHty8JVewLab06xgRFb0O/lsefRnEEUyahuW4nbQ4eM0qciypNzxfsnyqUfpvbueZysU6DrFuejXQX8CCesOtlTjfKHE
     container: builds
     folder: PLAYER\$(APPVEYOR_BUILD_WORKER_IMAGE)
-    artifact: index.html,play.html,bundle.js,jquery-1.9.0.min.js,bootstrap.min.js,MediaGoom.png
+    artifact: index.html,play.html,bundle.js,jquery-1.9.0.min.js,bootstrap.min.js,MediaGoom.png,bootstrap.min.css,play.json
     unzip: false
     set_content_type: true
 
