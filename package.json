@@ -12,7 +12,7 @@
     "localtest": "node ./node_modules/karma/bin/karma start --single-run --no-auto-watch --testuri=http://localhost:3000/play/uploader/002569741225_Sintel_2010_1080p_mkv/STATIC",
     "souce": "node ./node_modules/karma/bin/karma start ./karma.conf.soucelabs.js",
     "package": "browserify src/play.js --standalone mgplay --debug -t [ babelify --presets [ es2015 ] ] | exorcist index.js.map > index.js",
-    "build-dev": "browserify -t [ babelify ] src/main.js -o src/bundle.js -v"
+    "bundle": "browserify -t [ babelify ] src/main.js -o src/bundle.js -v"
   },
   "repository": {
     "type": "git",
@@ -34,7 +34,6 @@
     "babelify": "^7.3.0",
     "browserify-livereload": "^1.0.8",
     "chai": "^3.5.0",
-    "dashjs": "2.4.1",
     "http-server": "^0.9.0",
     "karma": "^2.0.5",
     "karma-chai": "^0.1.0",
@@ -47,10 +46,11 @@
     "mocha": "^3.2.0",
     "saucelabs": "^1.4.0",
     "saucelabs-finder": "0.0.0-alpha",
-    "urijs": "^1.18.9",
-    "watchify": "^3.7.0"
+    "watchify": "^3.7.0",
+    "exorcist": "^1.0.1"
   },
   "dependencies": {
-    "exorcist": "^1.0.1"
+    "urijs": "^1.18.9",
+    "dashjs": "2.4.1"
   }
 }
