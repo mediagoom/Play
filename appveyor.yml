@@ -62,7 +62,7 @@ deploy:
     folder: PLAYER\$(APPVEYOR_BUILD_WORKER_IMAGE)
     artifact: index.html,play.html,bundle.js,jquery-1.9.0.min.js,bootstrap.min.js,MediaGoom.png
     unzip: false
-    set_content_type: false
+    set_content_type: true
 
 #---------------------------------#
 #         notifications           #
