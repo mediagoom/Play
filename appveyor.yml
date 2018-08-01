@@ -18,10 +18,10 @@ build: off
 
 # Install Chrome.
 install:
-  - sh : sudo curl -sS -o - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add
-  - sh : sudo echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list
-  - sh : sudo apt-get -y update
-  - sh : sudo apt-get -y install google-chrome-stable
+  - sh : curl -sS -o - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add
+  - sh : echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list
+  - sh : apt-get -y update
+  - sh : apt-get -y install google-chrome-stable
 
 # to run your custom scripts instead of automatic MSBuild
 build_script:
