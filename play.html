@@ -60,12 +60,9 @@
     <script src="scripts/bootstrap.min.js"></script>
 
     <script src="src/bundle.js"></script>
-    
-    
-    
+ 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    
+   
 </head>
 <body>
 
@@ -507,12 +504,11 @@
                    
                     //options
                                        
-                    var src = getParamValuesByName('src');
+                    var src = getParamValuesByName('src', 'play.json');
                     if(null != src)
                     {
                         src = src.replace(/%3D/g, '=');
                         src = src.replace(/%20/g, ' ');
-
                     }
                         
                     //var autouri   = getParamValuesByName('autouri');
@@ -520,51 +516,58 @@
 
                     var vplayer    = getParamValuesByName('player');
                     
-                    var autoplay  = getParamValuesByName('autoplay', true);
-                    var muted     = getParamValuesByName('muted', false);
-                    var controls  = getParamValuesByName('controls', true);
+                    var autoplay   = getParamValuesByName('autoplay', true);
+                    var muted      = getParamValuesByName('muted', false);
+                    var controls   = getParamValuesByName('controls', true);
                     
-
-                    var jsoninfo  = getParamValuesByName('jsoninfo');
+                    var jsoninfo   = getParamValuesByName('jsoninfo');
 
                     var info = {}
+                  
+                    var opt = { autoplay : new Boolean( autoplay )
+                        , controls : new Boolean( controls )
+                        , muted : new Boolean( muted )
+                    };
 
-                    if (null != vplayer && src != null) {
-                        info[vplayer] = src;
-                    }
-
-                    let opt = { autoplay : new Boolean( autoplay ), controls : new Boolean( controls ), muted : new Boolean( muted )};
-                    let player = window.mgPlayer(opt);
+                    var player = window.mgPlayer(opt);
 
                     if(null != jsoninfo)
                     {
-                        $.getJSON( "play.json", function( data ) {
+                        $.getJSON( src, function( data ) {
                             
                             $.each( data.links, function( index, value ) {
-                                if(value.id === jsoninfo)
-                                {
-                                    info = value;
-                                }
-                            });
-                        
+                                    if(value.id === jsoninfo)
+                                    {
+                                        info = value;
+                                    }
+                            });    
                             
                             if(info.id)
                             {
-                                player.play(location.href, info);
+                                player.play(src, info);
                             }
                             else
                             {
                                 console.error("invalid info", JSON.stringify(info));
                             }
-                           
-                            
-                        
+
                         });
                 
                     }
                     else
                     {
-                        player.play(location.href, info);
+                        //We have a specific player and a url
+                        if (null != vplayer && src != null) {
+                            info[vplayer] = src;
+                            player.play(location.href, info);
+                        }
+                        else
+                        {
+                            //We just have a url. It should point to and info otherwise we do not no how to handle it.
+                            $.getJSON( src, function( data ) {
+                                player.play(src, info);
+                            });
+                        }
                     }
                 
                 });

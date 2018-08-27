@@ -37,7 +37,7 @@ build_script:
 # to run your custom scripts instead of automatic tests
 test_script:
   - cmd: npm test -- --browsers "Firefox,Chrome,IE"
-  - sh: npm test -- --browsers "ChromeHeadless"
+  - sh: npm test -- --browsers "SmallHeadlessChrome"
 
 #---------------------------------#
 #      artifacts configuration    #

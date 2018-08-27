@@ -3,7 +3,10 @@ import dashpack from './dashpack';
 import videopack from './videopack';
 import detector from './detector';
 import urijs from 'urijs';
+import dbgmodule from 'debug';
 
+const dbg = dbgmodule('mgplay:play');
+//localStorage.debug = 'mgplay:*'
 
 function html5embed(
       src
@@ -70,6 +73,8 @@ function html5embed(
     }
     
     obj += '</video>';
+
+    dbg("HTML5 ELEMENT: ", obj);
 
     return obj;
 
@@ -208,7 +213,7 @@ export default class mgPlayer extends EventEmitter {
         
         if(this.detector.MediaExtension() && ('string' === typeof info.dash))
         {
-            console.log(infouri, info.dash, absolute(infouri, info.dash));
+            dbg("DASH", infouri, info.dash, absolute(infouri, info.dash));
             this.playdash(absolute(infouri, info.dash), poster);
             return;
 
@@ -218,10 +223,13 @@ export default class mgPlayer extends EventEmitter {
 
         if(this.detector.HLSNative() && ('string' === typeof hlsuri))
         {
+            dbg("HLS", infouri, hlsuri, absolute(infouri, hlsuri));
             this.playhls(absolute(infouri, hlsuri), poster);
             return;
 
         }
+
+        dbg("CANNOT FIND A VALID PLUGIN PLAYER");
 
         throw new Error('Cannot find a valid player url configuration');
 
