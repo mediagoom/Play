@@ -9,7 +9,7 @@
     "serve": "http-server -o",
     "karma": "node ./node_modules/karma/bin/karma start",
     "test": "node ./node_modules/karma/bin/karma start --single-run --no-auto-watch",
-    "localtest": "node ./node_modules/karma/bin/karma start --single-run --no-auto-watch --testuri=http://localhost:3000/play/uploader/002569741225_Sintel_2010_1080p_mkv/STATIC",
+    "localtest": "node ./node_modules/karma/bin/karma start --single-run --no-auto-watch --testuri=http://localhost/video/002569741225_Sintel_2010_1080p_mkv/STATIC",
     "souce": "node ./node_modules/karma/bin/karma start ./karma.conf.soucelabs.js",
     "package": "browserify src/play.js --standalone mgplay --debug -t [ babelify --presets [ es2015 ] ] | exorcist index.js.map > index.js",
     "bundle": "browserify -t [ babelify ] src/main.js -o src/bundle.js -v"
@@ -51,7 +51,8 @@
     "watchify": "^3.7.0"
   },
   "dependencies": {
-    "urijs": "^1.18.9",
-    "dashjs": "2.4.1"
+    "dashjs": "2.4.1",
+    "debug": "^3.1.0",
+    "urijs": "^1.18.9"
   }
 }

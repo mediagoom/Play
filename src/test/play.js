@@ -1,10 +1,12 @@
 //'use strict';
 
+const dbg = console.log
+
 var TEST_URL = 'https://defgroupdisks.blob.core.windows.net/builds/PLAY/STATIC';
 
 function testuri()
 {
-    console.log(__karma__.config.args);
+    dbg("karma args: ", __karma__.config.args);
     
     if(__karma__.config.testuri)
         return __karma__.config.testuri;
@@ -14,14 +16,19 @@ function testuri()
 
 function log(msg)
 {
-    console.log(msg);
+    dbg(msg);
 
     var h = document.getElementById("info");
-    var t = h.innerHTML + '<br>' + msg;
-    h.innerHTML = t;
+    if(null != h)
+    {
+        var t = h.innerHTML + '<br>' + msg;
+        h.innerHTML = t;
+    }
 }
 
 describe('Player', function() {
+
+    localStorage.debug = 'mgplay:*';
 
 // inject the HTML fixture for the tests
   beforeEach(function() {
@@ -92,7 +99,7 @@ describe('Player', function() {
     }
 
 
-    it('detector' , function(){
+    it('detector work' , function(){
         
         var p = window.mgPlayer();
 
@@ -133,11 +140,6 @@ describe('Player', function() {
             p.play(testuri(), info);
     
     });
-
-    
-
-    
-
 
 });
 

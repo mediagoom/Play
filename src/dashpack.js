@@ -34,9 +34,7 @@ function dodash(myself,    src
     
 
     myself.dashplayer.initialize(elem, url, autoplay);
-
-    
-       
+  
 }
 
 export default class dashpack extends EventEmitter {

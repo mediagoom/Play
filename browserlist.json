@@ -1,3 +1,592 @@
-{  
-  "SL_safari_Mac_10.12_10":{"base": "SauceLabs", "browserName": "safari", "version": "10", "platform": "Mac 10.12"}  
-} 
+
+{ "SL_firefox_Mac_10.13_44":{"base": "SauceLabs", "browserName": "firefox", "version": "44", "platform": "Mac 10.13"}  
+,  "SL_firefox_Mac_10.13_45":{"base": "SauceLabs", "browserName": "firefox", "version": "45", "platform": "Mac 10.13"}  
+,  "SL_firefox_Mac_10.13_46":{"base": "SauceLabs", "browserName": "firefox", "version": "46", "platform": "Mac 10.13"}  
+,  "SL_firefox_Mac_10.13_47":{"base": "SauceLabs", "browserName": "firefox", "version": "47", "platform": "Mac 10.13"}  
+,  "SL_firefox_Mac_10.13_48":{"base": "SauceLabs", "browserName": "firefox", "version": "48", "platform": "Mac 10.13"}  
+,  "SL_firefox_Mac_10.13_49":{"base": "SauceLabs", "browserName": "firefox", "version": "49", "platform": "Mac 10.13"}  
+,  "SL_firefox_Mac_10.13_50":{"base": "SauceLabs", "browserName": "firefox", "version": "50", "platform": "Mac 10.13"}  
+,  "SL_firefox_Mac_10.13_51":{"base": "SauceLabs", "browserName": "firefox", "version": "51", "platform": "Mac 10.13"}  
+,  "SL_firefox_Mac_10.13_52":{"base": "SauceLabs", "browserName": "firefox", "version": "52", "platform": "Mac 10.13"}  
+,  "SL_firefox_Mac_10.13_53":{"base": "SauceLabs", "browserName": "firefox", "version": "53", "platform": "Mac 10.13"}  
+,  "SL_firefox_Mac_10.13_54":{"base": "SauceLabs", "browserName": "firefox", "version": "54", "platform": "Mac 10.13"}  
+,  "SL_firefox_Mac_10.13_55":{"base": "SauceLabs", "browserName": "firefox", "version": "55", "platform": "Mac 10.13"}  
+,  "SL_firefox_Mac_10.13_56":{"base": "SauceLabs", "browserName": "firefox", "version": "56", "platform": "Mac 10.13"}  
+,  "SL_firefox_Mac_10.13_57":{"base": "SauceLabs", "browserName": "firefox", "version": "57", "platform": "Mac 10.13"}  
+,  "SL_firefox_Mac_10.13_58":{"base": "SauceLabs", "browserName": "firefox", "version": "58", "platform": "Mac 10.13"}  
+,  "SL_firefox_Mac_10.13_59":{"base": "SauceLabs", "browserName": "firefox", "version": "59", "platform": "Mac 10.13"}  
+,  "SL_firefox_Mac_10.13_60":{"base": "SauceLabs", "browserName": "firefox", "version": "60", "platform": "Mac 10.13"}  
+,  "SL_firefox_Mac_10.13_61":{"base": "SauceLabs", "browserName": "firefox", "version": "61", "platform": "Mac 10.13"}  
+,  "SL_firefox_Mac_10.13_beta":{"base": "SauceLabs", "browserName": "firefox", "version": "beta", "platform": "Mac 10.13"}  
+,  "SL_firefox_Mac_10.9_44":{"base": "SauceLabs", "browserName": "firefox", "version": "44", "platform": "Mac 10.9"}  
+,  "SL_firefox_Mac_10.9_45":{"base": "SauceLabs", "browserName": "firefox", "version": "45", "platform": "Mac 10.9"}  
+,  "SL_firefox_Mac_10.9_46":{"base": "SauceLabs", "browserName": "firefox", "version": "46", "platform": "Mac 10.9"}  
+,  "SL_firefox_Mac_10.9_47":{"base": "SauceLabs", "browserName": "firefox", "version": "47", "platform": "Mac 10.9"}  
+,  "SL_firefox_Mac_10.9_48":{"base": "SauceLabs", "browserName": "firefox", "version": "48", "platform": "Mac 10.9"}  
+,  "SL_firefox_Mac_10.9_49":{"base": "SauceLabs", "browserName": "firefox", "version": "49", "platform": "Mac 10.9"}  
+,  "SL_firefox_Mac_10.9_50":{"base": "SauceLabs", "browserName": "firefox", "version": "50", "platform": "Mac 10.9"}  
+,  "SL_firefox_Mac_10.9_51":{"base": "SauceLabs", "browserName": "firefox", "version": "51", "platform": "Mac 10.9"}  
+,  "SL_firefox_Mac_10.9_52":{"base": "SauceLabs", "browserName": "firefox", "version": "52", "platform": "Mac 10.9"}  
+,  "SL_firefox_Mac_10.9_53":{"base": "SauceLabs", "browserName": "firefox", "version": "53", "platform": "Mac 10.9"}  
+,  "SL_firefox_Mac_10.9_54":{"base": "SauceLabs", "browserName": "firefox", "version": "54", "platform": "Mac 10.9"}  
+,  "SL_firefox_Mac_10.9_55":{"base": "SauceLabs", "browserName": "firefox", "version": "55", "platform": "Mac 10.9"}  
+,  "SL_firefox_Mac_10.9_56":{"base": "SauceLabs", "browserName": "firefox", "version": "56", "platform": "Mac 10.9"}  
+,  "SL_firefox_Mac_10.9_57":{"base": "SauceLabs", "browserName": "firefox", "version": "57", "platform": "Mac 10.9"}  
+,  "SL_firefox_Mac_10.9_58":{"base": "SauceLabs", "browserName": "firefox", "version": "58", "platform": "Mac 10.9"}  
+,  "SL_firefox_Mac_10.9_59":{"base": "SauceLabs", "browserName": "firefox", "version": "59", "platform": "Mac 10.9"}  
+,  "SL_firefox_Mac_10.9_60":{"base": "SauceLabs", "browserName": "firefox", "version": "60", "platform": "Mac 10.9"}  
+,  "SL_firefox_Mac_10.9_61":{"base": "SauceLabs", "browserName": "firefox", "version": "61", "platform": "Mac 10.9"}  
+,  "SL_firefox_Mac_10.9_beta":{"base": "SauceLabs", "browserName": "firefox", "version": "beta", "platform": "Mac 10.9"}  
+,  "SL_firefox_Windows_10_44":{"base": "SauceLabs", "browserName": "firefox", "version": "44", "platform": "Windows 10"}  
+,  "SL_firefox_Windows_10_45":{"base": "SauceLabs", "browserName": "firefox", "version": "45", "platform": "Windows 10"}  
+,  "SL_firefox_Windows_10_46":{"base": "SauceLabs", "browserName": "firefox", "version": "46", "platform": "Windows 10"}  
+,  "SL_firefox_Windows_10_47":{"base": "SauceLabs", "browserName": "firefox", "version": "47", "platform": "Windows 10"}  
+,  "SL_firefox_Windows_10_48":{"base": "SauceLabs", "browserName": "firefox", "version": "48", "platform": "Windows 10"}  
+,  "SL_firefox_Windows_10_49":{"base": "SauceLabs", "browserName": "firefox", "version": "49", "platform": "Windows 10"}  
+,  "SL_firefox_Windows_10_50":{"base": "SauceLabs", "browserName": "firefox", "version": "50", "platform": "Windows 10"}  
+,  "SL_firefox_Windows_10_51":{"base": "SauceLabs", "browserName": "firefox", "version": "51", "platform": "Windows 10"}  
+,  "SL_firefox_Windows_10_52":{"base": "SauceLabs", "browserName": "firefox", "version": "52", "platform": "Windows 10"}  
+,  "SL_firefox_Windows_10_53":{"base": "SauceLabs", "browserName": "firefox", "version": "53", "platform": "Windows 10"}  
+,  "SL_firefox_Windows_10_54":{"base": "SauceLabs", "browserName": "firefox", "version": "54", "platform": "Windows 10"}  
+,  "SL_firefox_Windows_10_55":{"base": "SauceLabs", "browserName": "firefox", "version": "55", "platform": "Windows 10"}  
+,  "SL_firefox_Windows_10_56":{"base": "SauceLabs", "browserName": "firefox", "version": "56", "platform": "Windows 10"}  
+,  "SL_firefox_Windows_10_57":{"base": "SauceLabs", "browserName": "firefox", "version": "57", "platform": "Windows 10"}  
+,  "SL_firefox_Windows_10_58":{"base": "SauceLabs", "browserName": "firefox", "version": "58", "platform": "Windows 10"}  
+,  "SL_firefox_Windows_10_59":{"base": "SauceLabs", "browserName": "firefox", "version": "59", "platform": "Windows 10"}  
+,  "SL_firefox_Windows_10_60":{"base": "SauceLabs", "browserName": "firefox", "version": "60", "platform": "Windows 10"}  
+,  "SL_firefox_Windows_10_61":{"base": "SauceLabs", "browserName": "firefox", "version": "61", "platform": "Windows 10"}  
+,  "SL_firefox_Windows_10_beta":{"base": "SauceLabs", "browserName": "firefox", "version": "beta", "platform": "Windows 10"}  
+,  "SL_firefox_Windows_2012_44":{"base": "SauceLabs", "browserName": "firefox", "version": "44", "platform": "Windows 2012"}  
+,  "SL_firefox_Windows_2012_45":{"base": "SauceLabs", "browserName": "firefox", "version": "45", "platform": "Windows 2012"}  
+,  "SL_firefox_Windows_2012_46":{"base": "SauceLabs", "browserName": "firefox", "version": "46", "platform": "Windows 2012"}  
+,  "SL_firefox_Windows_2012_47":{"base": "SauceLabs", "browserName": "firefox", "version": "47", "platform": "Windows 2012"}  
+,  "SL_firefox_Windows_2012_48":{"base": "SauceLabs", "browserName": "firefox", "version": "48", "platform": "Windows 2012"}  
+,  "SL_firefox_Windows_2012_49":{"base": "SauceLabs", "browserName": "firefox", "version": "49", "platform": "Windows 2012"}  
+,  "SL_firefox_Windows_2012_50":{"base": "SauceLabs", "browserName": "firefox", "version": "50", "platform": "Windows 2012"}  
+,  "SL_firefox_Windows_2012_51":{"base": "SauceLabs", "browserName": "firefox", "version": "51", "platform": "Windows 2012"}  
+,  "SL_firefox_Windows_2012_52":{"base": "SauceLabs", "browserName": "firefox", "version": "52", "platform": "Windows 2012"}  
+,  "SL_firefox_Windows_2012_53":{"base": "SauceLabs", "browserName": "firefox", "version": "53", "platform": "Windows 2012"}  
+,  "SL_firefox_Windows_2012_54":{"base": "SauceLabs", "browserName": "firefox", "version": "54", "platform": "Windows 2012"}  
+,  "SL_firefox_Windows_2012_55":{"base": "SauceLabs", "browserName": "firefox", "version": "55", "platform": "Windows 2012"}  
+,  "SL_firefox_Windows_2012_56":{"base": "SauceLabs", "browserName": "firefox", "version": "56", "platform": "Windows 2012"}  
+,  "SL_firefox_Windows_2012_57":{"base": "SauceLabs", "browserName": "firefox", "version": "57", "platform": "Windows 2012"}  
+,  "SL_firefox_Windows_2012_58":{"base": "SauceLabs", "browserName": "firefox", "version": "58", "platform": "Windows 2012"}  
+,  "SL_firefox_Windows_2012_59":{"base": "SauceLabs", "browserName": "firefox", "version": "59", "platform": "Windows 2012"}  
+,  "SL_firefox_Windows_2012_60":{"base": "SauceLabs", "browserName": "firefox", "version": "60", "platform": "Windows 2012"}  
+,  "SL_firefox_Windows_2012_61":{"base": "SauceLabs", "browserName": "firefox", "version": "61", "platform": "Windows 2012"}  
+,  "SL_firefox_Windows_2012_beta":{"base": "SauceLabs", "browserName": "firefox", "version": "beta", "platform": "Windows 2012"}  
+,  "SL_firefox_Windows_2012_R2_44":{"base": "SauceLabs", "browserName": "firefox", "version": "44", "platform": "Windows 2012 R2"}  
+,  "SL_firefox_Windows_2012_R2_45":{"base": "SauceLabs", "browserName": "firefox", "version": "45", "platform": "Windows 2012 R2"}  
+,  "SL_firefox_Windows_2012_R2_46":{"base": "SauceLabs", "browserName": "firefox", "version": "46", "platform": "Windows 2012 R2"}  
+,  "SL_firefox_Windows_2012_R2_47":{"base": "SauceLabs", "browserName": "firefox", "version": "47", "platform": "Windows 2012 R2"}  
+,  "SL_firefox_Windows_2012_R2_48":{"base": "SauceLabs", "browserName": "firefox", "version": "48", "platform": "Windows 2012 R2"}  
+,  "SL_firefox_Windows_2012_R2_49":{"base": "SauceLabs", "browserName": "firefox", "version": "49", "platform": "Windows 2012 R2"}  
+,  "SL_firefox_Windows_2012_R2_50":{"base": "SauceLabs", "browserName": "firefox", "version": "50", "platform": "Windows 2012 R2"}  
+,  "SL_firefox_Windows_2012_R2_51":{"base": "SauceLabs", "browserName": "firefox", "version": "51", "platform": "Windows 2012 R2"}  
+,  "SL_firefox_Windows_2012_R2_52":{"base": "SauceLabs", "browserName": "firefox", "version": "52", "platform": "Windows 2012 R2"}  
+,  "SL_firefox_Windows_2012_R2_53":{"base": "SauceLabs", "browserName": "firefox", "version": "53", "platform": "Windows 2012 R2"}  
+,  "SL_firefox_Windows_2012_R2_54":{"base": "SauceLabs", "browserName": "firefox", "version": "54", "platform": "Windows 2012 R2"}  
+,  "SL_firefox_Windows_2012_R2_55":{"base": "SauceLabs", "browserName": "firefox", "version": "55", "platform": "Windows 2012 R2"}  
+,  "SL_firefox_Windows_2012_R2_56":{"base": "SauceLabs", "browserName": "firefox", "version": "56", "platform": "Windows 2012 R2"}  
+,  "SL_firefox_Windows_2012_R2_57":{"base": "SauceLabs", "browserName": "firefox", "version": "57", "platform": "Windows 2012 R2"}  
+,  "SL_firefox_Windows_2012_R2_58":{"base": "SauceLabs", "browserName": "firefox", "version": "58", "platform": "Windows 2012 R2"}  
+,  "SL_firefox_Windows_2012_R2_59":{"base": "SauceLabs", "browserName": "firefox", "version": "59", "platform": "Windows 2012 R2"}  
+,  "SL_firefox_Windows_2012_R2_60":{"base": "SauceLabs", "browserName": "firefox", "version": "60", "platform": "Windows 2012 R2"}  
+,  "SL_firefox_Windows_2012_R2_61":{"base": "SauceLabs", "browserName": "firefox", "version": "61", "platform": "Windows 2012 R2"}  
+,  "SL_firefox_Windows_2012_R2_beta":{"base": "SauceLabs", "browserName": "firefox", "version": "beta", "platform": "Windows 2012 R2"}  
+,  "SL_firefox_Mac_10.12_44":{"base": "SauceLabs", "browserName": "firefox", "version": "44", "platform": "Mac 10.12"}  
+,  "SL_firefox_Mac_10.12_45":{"base": "SauceLabs", "browserName": "firefox", "version": "45", "platform": "Mac 10.12"}  
+,  "SL_firefox_Mac_10.12_46":{"base": "SauceLabs", "browserName": "firefox", "version": "46", "platform": "Mac 10.12"}  
+,  "SL_firefox_Mac_10.12_47":{"base": "SauceLabs", "browserName": "firefox", "version": "47", "platform": "Mac 10.12"}  
+,  "SL_firefox_Mac_10.12_48":{"base": "SauceLabs", "browserName": "firefox", "version": "48", "platform": "Mac 10.12"}  
+,  "SL_firefox_Mac_10.12_49":{"base": "SauceLabs", "browserName": "firefox", "version": "49", "platform": "Mac 10.12"}  
+,  "SL_firefox_Mac_10.12_50":{"base": "SauceLabs", "browserName": "firefox", "version": "50", "platform": "Mac 10.12"}  
+,  "SL_firefox_Mac_10.12_51":{"base": "SauceLabs", "browserName": "firefox", "version": "51", "platform": "Mac 10.12"}  
+,  "SL_firefox_Mac_10.12_52":{"base": "SauceLabs", "browserName": "firefox", "version": "52", "platform": "Mac 10.12"}  
+,  "SL_firefox_Mac_10.12_53":{"base": "SauceLabs", "browserName": "firefox", "version": "53", "platform": "Mac 10.12"}  
+,  "SL_firefox_Mac_10.12_54":{"base": "SauceLabs", "browserName": "firefox", "version": "54", "platform": "Mac 10.12"}  
+,  "SL_firefox_Mac_10.12_55":{"base": "SauceLabs", "browserName": "firefox", "version": "55", "platform": "Mac 10.12"}  
+,  "SL_firefox_Mac_10.12_56":{"base": "SauceLabs", "browserName": "firefox", "version": "56", "platform": "Mac 10.12"}  
+,  "SL_firefox_Mac_10.12_57":{"base": "SauceLabs", "browserName": "firefox", "version": "57", "platform": "Mac 10.12"}  
+,  "SL_firefox_Mac_10.12_58":{"base": "SauceLabs", "browserName": "firefox", "version": "58", "platform": "Mac 10.12"}  
+,  "SL_firefox_Mac_10.12_59":{"base": "SauceLabs", "browserName": "firefox", "version": "59", "platform": "Mac 10.12"}  
+,  "SL_firefox_Mac_10.12_60":{"base": "SauceLabs", "browserName": "firefox", "version": "60", "platform": "Mac 10.12"}  
+,  "SL_firefox_Mac_10.12_61":{"base": "SauceLabs", "browserName": "firefox", "version": "61", "platform": "Mac 10.12"}  
+,  "SL_firefox_Mac_10.12_beta":{"base": "SauceLabs", "browserName": "firefox", "version": "beta", "platform": "Mac 10.12"}  
+,  "SL_firefox_Mac_10.11_44":{"base": "SauceLabs", "browserName": "firefox", "version": "44", "platform": "Mac 10.11"}  
+,  "SL_firefox_Mac_10.11_45":{"base": "SauceLabs", "browserName": "firefox", "version": "45", "platform": "Mac 10.11"}  
+,  "SL_firefox_Mac_10.11_46":{"base": "SauceLabs", "browserName": "firefox", "version": "46", "platform": "Mac 10.11"}  
+,  "SL_firefox_Mac_10.11_47":{"base": "SauceLabs", "browserName": "firefox", "version": "47", "platform": "Mac 10.11"}  
+,  "SL_firefox_Mac_10.11_48":{"base": "SauceLabs", "browserName": "firefox", "version": "48", "platform": "Mac 10.11"}  
+,  "SL_firefox_Mac_10.11_49":{"base": "SauceLabs", "browserName": "firefox", "version": "49", "platform": "Mac 10.11"}  
+,  "SL_firefox_Mac_10.11_50":{"base": "SauceLabs", "browserName": "firefox", "version": "50", "platform": "Mac 10.11"}  
+,  "SL_firefox_Mac_10.11_51":{"base": "SauceLabs", "browserName": "firefox", "version": "51", "platform": "Mac 10.11"}  
+,  "SL_firefox_Mac_10.11_52":{"base": "SauceLabs", "browserName": "firefox", "version": "52", "platform": "Mac 10.11"}  
+,  "SL_firefox_Mac_10.11_53":{"base": "SauceLabs", "browserName": "firefox", "version": "53", "platform": "Mac 10.11"}  
+,  "SL_firefox_Mac_10.11_54":{"base": "SauceLabs", "browserName": "firefox", "version": "54", "platform": "Mac 10.11"}  
+,  "SL_firefox_Mac_10.11_55":{"base": "SauceLabs", "browserName": "firefox", "version": "55", "platform": "Mac 10.11"}  
+,  "SL_firefox_Mac_10.11_56":{"base": "SauceLabs", "browserName": "firefox", "version": "56", "platform": "Mac 10.11"}  
+,  "SL_firefox_Mac_10.11_57":{"base": "SauceLabs", "browserName": "firefox", "version": "57", "platform": "Mac 10.11"}  
+,  "SL_firefox_Mac_10.11_58":{"base": "SauceLabs", "browserName": "firefox", "version": "58", "platform": "Mac 10.11"}  
+,  "SL_firefox_Mac_10.11_59":{"base": "SauceLabs", "browserName": "firefox", "version": "59", "platform": "Mac 10.11"}  
+,  "SL_firefox_Mac_10.11_60":{"base": "SauceLabs", "browserName": "firefox", "version": "60", "platform": "Mac 10.11"}  
+,  "SL_firefox_Mac_10.11_61":{"base": "SauceLabs", "browserName": "firefox", "version": "61", "platform": "Mac 10.11"}  
+,  "SL_firefox_Mac_10.11_beta":{"base": "SauceLabs", "browserName": "firefox", "version": "beta", "platform": "Mac 10.11"}  
+,  "SL_firefox_Linux_44":{"base": "SauceLabs", "browserName": "firefox", "version": "44", "platform": "Linux"}  
+,  "SL_firefox_Linux_45":{"base": "SauceLabs", "browserName": "firefox", "version": "45", "platform": "Linux"}  
+,  "SL_firefox_Windows_2008_44":{"base": "SauceLabs", "browserName": "firefox", "version": "44", "platform": "Windows 2008"}  
+,  "SL_firefox_Windows_2008_45":{"base": "SauceLabs", "browserName": "firefox", "version": "45", "platform": "Windows 2008"}  
+,  "SL_firefox_Windows_2008_46":{"base": "SauceLabs", "browserName": "firefox", "version": "46", "platform": "Windows 2008"}  
+,  "SL_firefox_Windows_2008_47":{"base": "SauceLabs", "browserName": "firefox", "version": "47", "platform": "Windows 2008"}  
+,  "SL_firefox_Windows_2008_48":{"base": "SauceLabs", "browserName": "firefox", "version": "48", "platform": "Windows 2008"}  
+,  "SL_firefox_Windows_2008_49":{"base": "SauceLabs", "browserName": "firefox", "version": "49", "platform": "Windows 2008"}  
+,  "SL_firefox_Windows_2008_50":{"base": "SauceLabs", "browserName": "firefox", "version": "50", "platform": "Windows 2008"}  
+,  "SL_firefox_Windows_2008_51":{"base": "SauceLabs", "browserName": "firefox", "version": "51", "platform": "Windows 2008"}  
+,  "SL_firefox_Windows_2008_52":{"base": "SauceLabs", "browserName": "firefox", "version": "52", "platform": "Windows 2008"}  
+,  "SL_firefox_Windows_2008_53":{"base": "SauceLabs", "browserName": "firefox", "version": "53", "platform": "Windows 2008"}  
+,  "SL_firefox_Windows_2008_54":{"base": "SauceLabs", "browserName": "firefox", "version": "54", "platform": "Windows 2008"}  
+,  "SL_firefox_Windows_2008_55":{"base": "SauceLabs", "browserName": "firefox", "version": "55", "platform": "Windows 2008"}  
+,  "SL_firefox_Windows_2008_56":{"base": "SauceLabs", "browserName": "firefox", "version": "56", "platform": "Windows 2008"}  
+,  "SL_firefox_Windows_2008_57":{"base": "SauceLabs", "browserName": "firefox", "version": "57", "platform": "Windows 2008"}  
+,  "SL_firefox_Windows_2008_58":{"base": "SauceLabs", "browserName": "firefox", "version": "58", "platform": "Windows 2008"}  
+,  "SL_firefox_Windows_2008_59":{"base": "SauceLabs", "browserName": "firefox", "version": "59", "platform": "Windows 2008"}  
+,  "SL_firefox_Windows_2008_60":{"base": "SauceLabs", "browserName": "firefox", "version": "60", "platform": "Windows 2008"}  
+,  "SL_firefox_Windows_2008_61":{"base": "SauceLabs", "browserName": "firefox", "version": "61", "platform": "Windows 2008"}  
+,  "SL_firefox_Windows_2008_beta":{"base": "SauceLabs", "browserName": "firefox", "version": "beta", "platform": "Windows 2008"}  
+,  "SL_firefox_Mac_10.10_44":{"base": "SauceLabs", "browserName": "firefox", "version": "44", "platform": "Mac 10.10"}  
+,  "SL_firefox_Mac_10.10_45":{"base": "SauceLabs", "browserName": "firefox", "version": "45", "platform": "Mac 10.10"}  
+,  "SL_firefox_Mac_10.10_46":{"base": "SauceLabs", "browserName": "firefox", "version": "46", "platform": "Mac 10.10"}  
+,  "SL_firefox_Mac_10.10_47":{"base": "SauceLabs", "browserName": "firefox", "version": "47", "platform": "Mac 10.10"}  
+,  "SL_firefox_Mac_10.10_beta":{"base": "SauceLabs", "browserName": "firefox", "version": "beta", "platform": "Mac 10.10"}  
+,  "SL_chrome_Mac_10.13_47":{"base": "SauceLabs", "browserName": "chrome", "version": "47", "platform": "Mac 10.13"}  
+,  "SL_chrome_Mac_10.13_48":{"base": "SauceLabs", "browserName": "chrome", "version": "48", "platform": "Mac 10.13"}  
+,  "SL_chrome_Mac_10.13_49":{"base": "SauceLabs", "browserName": "chrome", "version": "49", "platform": "Mac 10.13"}  
+,  "SL_chrome_Mac_10.13_50":{"base": "SauceLabs", "browserName": "chrome", "version": "50", "platform": "Mac 10.13"}  
+,  "SL_chrome_Mac_10.13_51":{"base": "SauceLabs", "browserName": "chrome", "version": "51", "platform": "Mac 10.13"}  
+,  "SL_chrome_Mac_10.13_52":{"base": "SauceLabs", "browserName": "chrome", "version": "52", "platform": "Mac 10.13"}  
+,  "SL_chrome_Mac_10.13_53":{"base": "SauceLabs", "browserName": "chrome", "version": "53", "platform": "Mac 10.13"}  
+,  "SL_chrome_Mac_10.13_54":{"base": "SauceLabs", "browserName": "chrome", "version": "54", "platform": "Mac 10.13"}  
+,  "SL_chrome_Mac_10.13_55":{"base": "SauceLabs", "browserName": "chrome", "version": "55", "platform": "Mac 10.13"}  
+,  "SL_chrome_Mac_10.13_56":{"base": "SauceLabs", "browserName": "chrome", "version": "56", "platform": "Mac 10.13"}  
+,  "SL_chrome_Mac_10.13_57":{"base": "SauceLabs", "browserName": "chrome", "version": "57", "platform": "Mac 10.13"}  
+,  "SL_chrome_Mac_10.13_58":{"base": "SauceLabs", "browserName": "chrome", "version": "58", "platform": "Mac 10.13"}  
+,  "SL_chrome_Mac_10.13_59":{"base": "SauceLabs", "browserName": "chrome", "version": "59", "platform": "Mac 10.13"}  
+,  "SL_chrome_Mac_10.13_60":{"base": "SauceLabs", "browserName": "chrome", "version": "60", "platform": "Mac 10.13"}  
+,  "SL_chrome_Mac_10.13_61":{"base": "SauceLabs", "browserName": "chrome", "version": "61", "platform": "Mac 10.13"}  
+,  "SL_chrome_Mac_10.13_62":{"base": "SauceLabs", "browserName": "chrome", "version": "62", "platform": "Mac 10.13"}  
+,  "SL_chrome_Mac_10.13_63":{"base": "SauceLabs", "browserName": "chrome", "version": "63", "platform": "Mac 10.13"}  
+,  "SL_chrome_Mac_10.13_64":{"base": "SauceLabs", "browserName": "chrome", "version": "64", "platform": "Mac 10.13"}  
+,  "SL_chrome_Mac_10.13_65":{"base": "SauceLabs", "browserName": "chrome", "version": "65", "platform": "Mac 10.13"}  
+,  "SL_chrome_Mac_10.13_66":{"base": "SauceLabs", "browserName": "chrome", "version": "66", "platform": "Mac 10.13"}  
+,  "SL_chrome_Mac_10.13_67":{"base": "SauceLabs", "browserName": "chrome", "version": "67", "platform": "Mac 10.13"}  
+,  "SL_chrome_Mac_10.13_68":{"base": "SauceLabs", "browserName": "chrome", "version": "68", "platform": "Mac 10.13"}  
+,  "SL_chrome_Mac_10.13_beta":{"base": "SauceLabs", "browserName": "chrome", "version": "beta", "platform": "Mac 10.13"}  
+,  "SL_chrome_Mac_10.9_47":{"base": "SauceLabs", "browserName": "chrome", "version": "47", "platform": "Mac 10.9"}  
+,  "SL_chrome_Mac_10.9_48":{"base": "SauceLabs", "browserName": "chrome", "version": "48", "platform": "Mac 10.9"}  
+,  "SL_chrome_Mac_10.9_49":{"base": "SauceLabs", "browserName": "chrome", "version": "49", "platform": "Mac 10.9"}  
+,  "SL_chrome_Mac_10.9_50":{"base": "SauceLabs", "browserName": "chrome", "version": "50", "platform": "Mac 10.9"}  
+,  "SL_chrome_Mac_10.9_51":{"base": "SauceLabs", "browserName": "chrome", "version": "51", "platform": "Mac 10.9"}  
+,  "SL_chrome_Mac_10.9_52":{"base": "SauceLabs", "browserName": "chrome", "version": "52", "platform": "Mac 10.9"}  
+,  "SL_chrome_Mac_10.9_53":{"base": "SauceLabs", "browserName": "chrome", "version": "53", "platform": "Mac 10.9"}  
+,  "SL_chrome_Mac_10.9_54":{"base": "SauceLabs", "browserName": "chrome", "version": "54", "platform": "Mac 10.9"}  
+,  "SL_chrome_Mac_10.9_55":{"base": "SauceLabs", "browserName": "chrome", "version": "55", "platform": "Mac 10.9"}  
+,  "SL_chrome_Mac_10.9_56":{"base": "SauceLabs", "browserName": "chrome", "version": "56", "platform": "Mac 10.9"}  
+,  "SL_chrome_Mac_10.9_57":{"base": "SauceLabs", "browserName": "chrome", "version": "57", "platform": "Mac 10.9"}  
+,  "SL_chrome_Mac_10.9_58":{"base": "SauceLabs", "browserName": "chrome", "version": "58", "platform": "Mac 10.9"}  
+,  "SL_chrome_Mac_10.9_59":{"base": "SauceLabs", "browserName": "chrome", "version": "59", "platform": "Mac 10.9"}  
+,  "SL_chrome_Mac_10.9_60":{"base": "SauceLabs", "browserName": "chrome", "version": "60", "platform": "Mac 10.9"}  
+,  "SL_chrome_Mac_10.9_61":{"base": "SauceLabs", "browserName": "chrome", "version": "61", "platform": "Mac 10.9"}  
+,  "SL_chrome_Mac_10.9_62":{"base": "SauceLabs", "browserName": "chrome", "version": "62", "platform": "Mac 10.9"}  
+,  "SL_chrome_Mac_10.9_63":{"base": "SauceLabs", "browserName": "chrome", "version": "63", "platform": "Mac 10.9"}  
+,  "SL_chrome_Mac_10.9_64":{"base": "SauceLabs", "browserName": "chrome", "version": "64", "platform": "Mac 10.9"}  
+,  "SL_chrome_Mac_10.9_65":{"base": "SauceLabs", "browserName": "chrome", "version": "65", "platform": "Mac 10.9"}  
+,  "SL_chrome_Mac_10.9_beta":{"base": "SauceLabs", "browserName": "chrome", "version": "beta", "platform": "Mac 10.9"}  
+,  "SL_chrome_Windows_10_47":{"base": "SauceLabs", "browserName": "chrome", "version": "47", "platform": "Windows 10"}  
+,  "SL_chrome_Windows_10_48":{"base": "SauceLabs", "browserName": "chrome", "version": "48", "platform": "Windows 10"}  
+,  "SL_chrome_Windows_10_49":{"base": "SauceLabs", "browserName": "chrome", "version": "49", "platform": "Windows 10"}  
+,  "SL_chrome_Windows_10_50":{"base": "SauceLabs", "browserName": "chrome", "version": "50", "platform": "Windows 10"}  
+,  "SL_chrome_Windows_10_51":{"base": "SauceLabs", "browserName": "chrome", "version": "51", "platform": "Windows 10"}  
+,  "SL_chrome_Windows_10_52":{"base": "SauceLabs", "browserName": "chrome", "version": "52", "platform": "Windows 10"}  
+,  "SL_chrome_Windows_10_53":{"base": "SauceLabs", "browserName": "chrome", "version": "53", "platform": "Windows 10"}  
+,  "SL_chrome_Windows_10_54":{"base": "SauceLabs", "browserName": "chrome", "version": "54", "platform": "Windows 10"}  
+,  "SL_chrome_Windows_10_55":{"base": "SauceLabs", "browserName": "chrome", "version": "55", "platform": "Windows 10"}  
+,  "SL_chrome_Windows_10_56":{"base": "SauceLabs", "browserName": "chrome", "version": "56", "platform": "Windows 10"}  
+,  "SL_chrome_Windows_10_57":{"base": "SauceLabs", "browserName": "chrome", "version": "57", "platform": "Windows 10"}  
+,  "SL_chrome_Windows_10_58":{"base": "SauceLabs", "browserName": "chrome", "version": "58", "platform": "Windows 10"}  
+,  "SL_chrome_Windows_10_59":{"base": "SauceLabs", "browserName": "chrome", "version": "59", "platform": "Windows 10"}  
+,  "SL_chrome_Windows_10_60":{"base": "SauceLabs", "browserName": "chrome", "version": "60", "platform": "Windows 10"}  
+,  "SL_chrome_Windows_10_61":{"base": "SauceLabs", "browserName": "chrome", "version": "61", "platform": "Windows 10"}  
+,  "SL_chrome_Windows_10_62":{"base": "SauceLabs", "browserName": "chrome", "version": "62", "platform": "Windows 10"}  
+,  "SL_chrome_Windows_10_63":{"base": "SauceLabs", "browserName": "chrome", "version": "63", "platform": "Windows 10"}  
+,  "SL_chrome_Windows_10_64":{"base": "SauceLabs", "browserName": "chrome", "version": "64", "platform": "Windows 10"}  
+,  "SL_chrome_Windows_10_65":{"base": "SauceLabs", "browserName": "chrome", "version": "65", "platform": "Windows 10"}  
+,  "SL_chrome_Windows_10_66":{"base": "SauceLabs", "browserName": "chrome", "version": "66", "platform": "Windows 10"}  
+,  "SL_chrome_Windows_10_67":{"base": "SauceLabs", "browserName": "chrome", "version": "67", "platform": "Windows 10"}  
+,  "SL_chrome_Windows_10_68":{"base": "SauceLabs", "browserName": "chrome", "version": "68", "platform": "Windows 10"}  
+,  "SL_chrome_Windows_10_beta":{"base": "SauceLabs", "browserName": "chrome", "version": "beta", "platform": "Windows 10"}  
+,  "SL_chrome_Windows_2012_47":{"base": "SauceLabs", "browserName": "chrome", "version": "47", "platform": "Windows 2012"}  
+,  "SL_chrome_Windows_2012_48":{"base": "SauceLabs", "browserName": "chrome", "version": "48", "platform": "Windows 2012"}  
+,  "SL_chrome_Windows_2012_49":{"base": "SauceLabs", "browserName": "chrome", "version": "49", "platform": "Windows 2012"}  
+,  "SL_chrome_Windows_2012_50":{"base": "SauceLabs", "browserName": "chrome", "version": "50", "platform": "Windows 2012"}  
+,  "SL_chrome_Windows_2012_51":{"base": "SauceLabs", "browserName": "chrome", "version": "51", "platform": "Windows 2012"}  
+,  "SL_chrome_Windows_2012_52":{"base": "SauceLabs", "browserName": "chrome", "version": "52", "platform": "Windows 2012"}  
+,  "SL_chrome_Windows_2012_53":{"base": "SauceLabs", "browserName": "chrome", "version": "53", "platform": "Windows 2012"}  
+,  "SL_chrome_Windows_2012_54":{"base": "SauceLabs", "browserName": "chrome", "version": "54", "platform": "Windows 2012"}  
+,  "SL_chrome_Windows_2012_55":{"base": "SauceLabs", "browserName": "chrome", "version": "55", "platform": "Windows 2012"}  
+,  "SL_chrome_Windows_2012_56":{"base": "SauceLabs", "browserName": "chrome", "version": "56", "platform": "Windows 2012"}  
+,  "SL_chrome_Windows_2012_57":{"base": "SauceLabs", "browserName": "chrome", "version": "57", "platform": "Windows 2012"}  
+,  "SL_chrome_Windows_2012_58":{"base": "SauceLabs", "browserName": "chrome", "version": "58", "platform": "Windows 2012"}  
+,  "SL_chrome_Windows_2012_59":{"base": "SauceLabs", "browserName": "chrome", "version": "59", "platform": "Windows 2012"}  
+,  "SL_chrome_Windows_2012_60":{"base": "SauceLabs", "browserName": "chrome", "version": "60", "platform": "Windows 2012"}  
+,  "SL_chrome_Windows_2012_61":{"base": "SauceLabs", "browserName": "chrome", "version": "61", "platform": "Windows 2012"}  
+,  "SL_chrome_Windows_2012_62":{"base": "SauceLabs", "browserName": "chrome", "version": "62", "platform": "Windows 2012"}  
+,  "SL_chrome_Windows_2012_63":{"base": "SauceLabs", "browserName": "chrome", "version": "63", "platform": "Windows 2012"}  
+,  "SL_chrome_Windows_2012_64":{"base": "SauceLabs", "browserName": "chrome", "version": "64", "platform": "Windows 2012"}  
+,  "SL_chrome_Windows_2012_65":{"base": "SauceLabs", "browserName": "chrome", "version": "65", "platform": "Windows 2012"}  
+,  "SL_chrome_Windows_2012_66":{"base": "SauceLabs", "browserName": "chrome", "version": "66", "platform": "Windows 2012"}  
+,  "SL_chrome_Windows_2012_67":{"base": "SauceLabs", "browserName": "chrome", "version": "67", "platform": "Windows 2012"}  
+,  "SL_chrome_Windows_2012_68":{"base": "SauceLabs", "browserName": "chrome", "version": "68", "platform": "Windows 2012"}  
+,  "SL_chrome_Windows_2012_beta":{"base": "SauceLabs", "browserName": "chrome", "version": "beta", "platform": "Windows 2012"}  
+,  "SL_chrome_Windows_2012_R2_47":{"base": "SauceLabs", "browserName": "chrome", "version": "47", "platform": "Windows 2012 R2"}  
+,  "SL_chrome_Windows_2012_R2_48":{"base": "SauceLabs", "browserName": "chrome", "version": "48", "platform": "Windows 2012 R2"}  
+,  "SL_chrome_Windows_2012_R2_49":{"base": "SauceLabs", "browserName": "chrome", "version": "49", "platform": "Windows 2012 R2"}  
+,  "SL_chrome_Windows_2012_R2_50":{"base": "SauceLabs", "browserName": "chrome", "version": "50", "platform": "Windows 2012 R2"}  
+,  "SL_chrome_Windows_2012_R2_51":{"base": "SauceLabs", "browserName": "chrome", "version": "51", "platform": "Windows 2012 R2"}  
+,  "SL_chrome_Windows_2012_R2_52":{"base": "SauceLabs", "browserName": "chrome", "version": "52", "platform": "Windows 2012 R2"}  
+,  "SL_chrome_Windows_2012_R2_53":{"base": "SauceLabs", "browserName": "chrome", "version": "53", "platform": "Windows 2012 R2"}  
+,  "SL_chrome_Windows_2012_R2_54":{"base": "SauceLabs", "browserName": "chrome", "version": "54", "platform": "Windows 2012 R2"}  
+,  "SL_chrome_Windows_2012_R2_55":{"base": "SauceLabs", "browserName": "chrome", "version": "55", "platform": "Windows 2012 R2"}  
+,  "SL_chrome_Windows_2012_R2_56":{"base": "SauceLabs", "browserName": "chrome", "version": "56", "platform": "Windows 2012 R2"}  
+,  "SL_chrome_Windows_2012_R2_57":{"base": "SauceLabs", "browserName": "chrome", "version": "57", "platform": "Windows 2012 R2"}  
+,  "SL_chrome_Windows_2012_R2_58":{"base": "SauceLabs", "browserName": "chrome", "version": "58", "platform": "Windows 2012 R2"}  
+,  "SL_chrome_Windows_2012_R2_59":{"base": "SauceLabs", "browserName": "chrome", "version": "59", "platform": "Windows 2012 R2"}  
+,  "SL_chrome_Windows_2012_R2_60":{"base": "SauceLabs", "browserName": "chrome", "version": "60", "platform": "Windows 2012 R2"}  
+,  "SL_chrome_Windows_2012_R2_61":{"base": "SauceLabs", "browserName": "chrome", "version": "61", "platform": "Windows 2012 R2"}  
+,  "SL_chrome_Windows_2012_R2_62":{"base": "SauceLabs", "browserName": "chrome", "version": "62", "platform": "Windows 2012 R2"}  
+,  "SL_chrome_Windows_2012_R2_63":{"base": "SauceLabs", "browserName": "chrome", "version": "63", "platform": "Windows 2012 R2"}  
+,  "SL_chrome_Windows_2012_R2_64":{"base": "SauceLabs", "browserName": "chrome", "version": "64", "platform": "Windows 2012 R2"}  
+,  "SL_chrome_Windows_2012_R2_65":{"base": "SauceLabs", "browserName": "chrome", "version": "65", "platform": "Windows 2012 R2"}  
+,  "SL_chrome_Windows_2012_R2_66":{"base": "SauceLabs", "browserName": "chrome", "version": "66", "platform": "Windows 2012 R2"}  
+,  "SL_chrome_Windows_2012_R2_67":{"base": "SauceLabs", "browserName": "chrome", "version": "67", "platform": "Windows 2012 R2"}  
+,  "SL_chrome_Windows_2012_R2_68":{"base": "SauceLabs", "browserName": "chrome", "version": "68", "platform": "Windows 2012 R2"}  
+,  "SL_chrome_Windows_2012_R2_beta":{"base": "SauceLabs", "browserName": "chrome", "version": "beta", "platform": "Windows 2012 R2"}  
+,  "SL_chrome_Mac_10.12_47":{"base": "SauceLabs", "browserName": "chrome", "version": "47", "platform": "Mac 10.12"}  
+,  "SL_chrome_Mac_10.12_48":{"base": "SauceLabs", "browserName": "chrome", "version": "48", "platform": "Mac 10.12"}  
+,  "SL_chrome_Mac_10.12_49":{"base": "SauceLabs", "browserName": "chrome", "version": "49", "platform": "Mac 10.12"}  
+,  "SL_chrome_Mac_10.12_50":{"base": "SauceLabs", "browserName": "chrome", "version": "50", "platform": "Mac 10.12"}  
+,  "SL_chrome_Mac_10.12_51":{"base": "SauceLabs", "browserName": "chrome", "version": "51", "platform": "Mac 10.12"}  
+,  "SL_chrome_Mac_10.12_52":{"base": "SauceLabs", "browserName": "chrome", "version": "52", "platform": "Mac 10.12"}  
+,  "SL_chrome_Mac_10.12_53":{"base": "SauceLabs", "browserName": "chrome", "version": "53", "platform": "Mac 10.12"}  
+,  "SL_chrome_Mac_10.12_54":{"base": "SauceLabs", "browserName": "chrome", "version": "54", "platform": "Mac 10.12"}  
+,  "SL_chrome_Mac_10.12_55":{"base": "SauceLabs", "browserName": "chrome", "version": "55", "platform": "Mac 10.12"}  
+,  "SL_chrome_Mac_10.12_56":{"base": "SauceLabs", "browserName": "chrome", "version": "56", "platform": "Mac 10.12"}  
+,  "SL_chrome_Mac_10.12_57":{"base": "SauceLabs", "browserName": "chrome", "version": "57", "platform": "Mac 10.12"}  
+,  "SL_chrome_Mac_10.12_58":{"base": "SauceLabs", "browserName": "chrome", "version": "58", "platform": "Mac 10.12"}  
+,  "SL_chrome_Mac_10.12_59":{"base": "SauceLabs", "browserName": "chrome", "version": "59", "platform": "Mac 10.12"}  
+,  "SL_chrome_Mac_10.12_60":{"base": "SauceLabs", "browserName": "chrome", "version": "60", "platform": "Mac 10.12"}  
+,  "SL_chrome_Mac_10.12_61":{"base": "SauceLabs", "browserName": "chrome", "version": "61", "platform": "Mac 10.12"}  
+,  "SL_chrome_Mac_10.12_62":{"base": "SauceLabs", "browserName": "chrome", "version": "62", "platform": "Mac 10.12"}  
+,  "SL_chrome_Mac_10.12_63":{"base": "SauceLabs", "browserName": "chrome", "version": "63", "platform": "Mac 10.12"}  
+,  "SL_chrome_Mac_10.12_64":{"base": "SauceLabs", "browserName": "chrome", "version": "64", "platform": "Mac 10.12"}  
+,  "SL_chrome_Mac_10.12_65":{"base": "SauceLabs", "browserName": "chrome", "version": "65", "platform": "Mac 10.12"}  
+,  "SL_chrome_Mac_10.12_66":{"base": "SauceLabs", "browserName": "chrome", "version": "66", "platform": "Mac 10.12"}  
+,  "SL_chrome_Mac_10.12_67":{"base": "SauceLabs", "browserName": "chrome", "version": "67", "platform": "Mac 10.12"}  
+,  "SL_chrome_Mac_10.12_68":{"base": "SauceLabs", "browserName": "chrome", "version": "68", "platform": "Mac 10.12"}  
+,  "SL_chrome_Mac_10.12_beta":{"base": "SauceLabs", "browserName": "chrome", "version": "beta", "platform": "Mac 10.12"}  
+,  "SL_chrome_Mac_10.11_47":{"base": "SauceLabs", "browserName": "chrome", "version": "47", "platform": "Mac 10.11"}  
+,  "SL_chrome_Mac_10.11_48":{"base": "SauceLabs", "browserName": "chrome", "version": "48", "platform": "Mac 10.11"}  
+,  "SL_chrome_Mac_10.11_49":{"base": "SauceLabs", "browserName": "chrome", "version": "49", "platform": "Mac 10.11"}  
+,  "SL_chrome_Mac_10.11_50":{"base": "SauceLabs", "browserName": "chrome", "version": "50", "platform": "Mac 10.11"}  
+,  "SL_chrome_Mac_10.11_51":{"base": "SauceLabs", "browserName": "chrome", "version": "51", "platform": "Mac 10.11"}  
+,  "SL_chrome_Mac_10.11_52":{"base": "SauceLabs", "browserName": "chrome", "version": "52", "platform": "Mac 10.11"}  
+,  "SL_chrome_Mac_10.11_53":{"base": "SauceLabs", "browserName": "chrome", "version": "53", "platform": "Mac 10.11"}  
+,  "SL_chrome_Mac_10.11_54":{"base": "SauceLabs", "browserName": "chrome", "version": "54", "platform": "Mac 10.11"}  
+,  "SL_chrome_Mac_10.11_55":{"base": "SauceLabs", "browserName": "chrome", "version": "55", "platform": "Mac 10.11"}  
+,  "SL_chrome_Mac_10.11_56":{"base": "SauceLabs", "browserName": "chrome", "version": "56", "platform": "Mac 10.11"}  
+,  "SL_chrome_Mac_10.11_57":{"base": "SauceLabs", "browserName": "chrome", "version": "57", "platform": "Mac 10.11"}  
+,  "SL_chrome_Mac_10.11_58":{"base": "SauceLabs", "browserName": "chrome", "version": "58", "platform": "Mac 10.11"}  
+,  "SL_chrome_Mac_10.11_59":{"base": "SauceLabs", "browserName": "chrome", "version": "59", "platform": "Mac 10.11"}  
+,  "SL_chrome_Mac_10.11_60":{"base": "SauceLabs", "browserName": "chrome", "version": "60", "platform": "Mac 10.11"}  
+,  "SL_chrome_Mac_10.11_61":{"base": "SauceLabs", "browserName": "chrome", "version": "61", "platform": "Mac 10.11"}  
+,  "SL_chrome_Mac_10.11_62":{"base": "SauceLabs", "browserName": "chrome", "version": "62", "platform": "Mac 10.11"}  
+,  "SL_chrome_Mac_10.11_63":{"base": "SauceLabs", "browserName": "chrome", "version": "63", "platform": "Mac 10.11"}  
+,  "SL_chrome_Mac_10.11_64":{"base": "SauceLabs", "browserName": "chrome", "version": "64", "platform": "Mac 10.11"}  
+,  "SL_chrome_Mac_10.11_65":{"base": "SauceLabs", "browserName": "chrome", "version": "65", "platform": "Mac 10.11"}  
+,  "SL_chrome_Mac_10.11_66":{"base": "SauceLabs", "browserName": "chrome", "version": "66", "platform": "Mac 10.11"}  
+,  "SL_chrome_Mac_10.11_67":{"base": "SauceLabs", "browserName": "chrome", "version": "67", "platform": "Mac 10.11"}  
+,  "SL_chrome_Mac_10.11_68":{"base": "SauceLabs", "browserName": "chrome", "version": "68", "platform": "Mac 10.11"}  
+,  "SL_chrome_Mac_10.11_beta":{"base": "SauceLabs", "browserName": "chrome", "version": "beta", "platform": "Mac 10.11"}  
+,  "SL_chrome_Linux_47":{"base": "SauceLabs", "browserName": "chrome", "version": "47", "platform": "Linux"}  
+,  "SL_chrome_Linux_48":{"base": "SauceLabs", "browserName": "chrome", "version": "48", "platform": "Linux"}  
+,  "SL_chrome_Windows_2008_47":{"base": "SauceLabs", "browserName": "chrome", "version": "47", "platform": "Windows 2008"}  
+,  "SL_chrome_Windows_2008_48":{"base": "SauceLabs", "browserName": "chrome", "version": "48", "platform": "Windows 2008"}  
+,  "SL_chrome_Windows_2008_49":{"base": "SauceLabs", "browserName": "chrome", "version": "49", "platform": "Windows 2008"}  
+,  "SL_chrome_Windows_2008_50":{"base": "SauceLabs", "browserName": "chrome", "version": "50", "platform": "Windows 2008"}  
+,  "SL_chrome_Windows_2008_51":{"base": "SauceLabs", "browserName": "chrome", "version": "51", "platform": "Windows 2008"}  
+,  "SL_chrome_Windows_2008_52":{"base": "SauceLabs", "browserName": "chrome", "version": "52", "platform": "Windows 2008"}  
+,  "SL_chrome_Windows_2008_53":{"base": "SauceLabs", "browserName": "chrome", "version": "53", "platform": "Windows 2008"}  
+,  "SL_chrome_Windows_2008_54":{"base": "SauceLabs", "browserName": "chrome", "version": "54", "platform": "Windows 2008"}  
+,  "SL_chrome_Windows_2008_55":{"base": "SauceLabs", "browserName": "chrome", "version": "55", "platform": "Windows 2008"}  
+,  "SL_chrome_Windows_2008_56":{"base": "SauceLabs", "browserName": "chrome", "version": "56", "platform": "Windows 2008"}  
+,  "SL_chrome_Windows_2008_57":{"base": "SauceLabs", "browserName": "chrome", "version": "57", "platform": "Windows 2008"}  
+,  "SL_chrome_Windows_2008_58":{"base": "SauceLabs", "browserName": "chrome", "version": "58", "platform": "Windows 2008"}  
+,  "SL_chrome_Windows_2008_59":{"base": "SauceLabs", "browserName": "chrome", "version": "59", "platform": "Windows 2008"}  
+,  "SL_chrome_Windows_2008_60":{"base": "SauceLabs", "browserName": "chrome", "version": "60", "platform": "Windows 2008"}  
+,  "SL_chrome_Windows_2008_61":{"base": "SauceLabs", "browserName": "chrome", "version": "61", "platform": "Windows 2008"}  
+,  "SL_chrome_Windows_2008_62":{"base": "SauceLabs", "browserName": "chrome", "version": "62", "platform": "Windows 2008"}  
+,  "SL_chrome_Windows_2008_63":{"base": "SauceLabs", "browserName": "chrome", "version": "63", "platform": "Windows 2008"}  
+,  "SL_chrome_Windows_2008_64":{"base": "SauceLabs", "browserName": "chrome", "version": "64", "platform": "Windows 2008"}  
+,  "SL_chrome_Windows_2008_65":{"base": "SauceLabs", "browserName": "chrome", "version": "65", "platform": "Windows 2008"}  
+,  "SL_chrome_Windows_2008_66":{"base": "SauceLabs", "browserName": "chrome", "version": "66", "platform": "Windows 2008"}  
+,  "SL_chrome_Windows_2008_67":{"base": "SauceLabs", "browserName": "chrome", "version": "67", "platform": "Windows 2008"}  
+,  "SL_chrome_Windows_2008_68":{"base": "SauceLabs", "browserName": "chrome", "version": "68", "platform": "Windows 2008"}  
+,  "SL_chrome_Windows_2008_beta":{"base": "SauceLabs", "browserName": "chrome", "version": "beta", "platform": "Windows 2008"}  
+,  "SL_chrome_Mac_10.10_47":{"base": "SauceLabs", "browserName": "chrome", "version": "47", "platform": "Mac 10.10"}  
+,  "SL_chrome_Mac_10.10_48":{"base": "SauceLabs", "browserName": "chrome", "version": "48", "platform": "Mac 10.10"}  
+,  "SL_chrome_Mac_10.10_49":{"base": "SauceLabs", "browserName": "chrome", "version": "49", "platform": "Mac 10.10"}  
+,  "SL_chrome_Mac_10.10_50":{"base": "SauceLabs", "browserName": "chrome", "version": "50", "platform": "Mac 10.10"}  
+,  "SL_chrome_Mac_10.10_51":{"base": "SauceLabs", "browserName": "chrome", "version": "51", "platform": "Mac 10.10"}  
+,  "SL_chrome_Mac_10.10_52":{"base": "SauceLabs", "browserName": "chrome", "version": "52", "platform": "Mac 10.10"}  
+,  "SL_chrome_Mac_10.10_53":{"base": "SauceLabs", "browserName": "chrome", "version": "53", "platform": "Mac 10.10"}  
+,  "SL_chrome_Mac_10.10_54":{"base": "SauceLabs", "browserName": "chrome", "version": "54", "platform": "Mac 10.10"}  
+,  "SL_chrome_Mac_10.10_55":{"base": "SauceLabs", "browserName": "chrome", "version": "55", "platform": "Mac 10.10"}  
+,  "SL_chrome_Mac_10.10_56":{"base": "SauceLabs", "browserName": "chrome", "version": "56", "platform": "Mac 10.10"}  
+,  "SL_chrome_Mac_10.10_57":{"base": "SauceLabs", "browserName": "chrome", "version": "57", "platform": "Mac 10.10"}  
+,  "SL_chrome_Mac_10.10_58":{"base": "SauceLabs", "browserName": "chrome", "version": "58", "platform": "Mac 10.10"}  
+,  "SL_chrome_Mac_10.10_59":{"base": "SauceLabs", "browserName": "chrome", "version": "59", "platform": "Mac 10.10"}  
+,  "SL_chrome_Mac_10.10_60":{"base": "SauceLabs", "browserName": "chrome", "version": "60", "platform": "Mac 10.10"}  
+,  "SL_chrome_Mac_10.10_61":{"base": "SauceLabs", "browserName": "chrome", "version": "61", "platform": "Mac 10.10"}  
+,  "SL_chrome_Mac_10.10_62":{"base": "SauceLabs", "browserName": "chrome", "version": "62", "platform": "Mac 10.10"}  
+,  "SL_chrome_Mac_10.10_63":{"base": "SauceLabs", "browserName": "chrome", "version": "63", "platform": "Mac 10.10"}  
+,  "SL_chrome_Mac_10.10_64":{"base": "SauceLabs", "browserName": "chrome", "version": "64", "platform": "Mac 10.10"}  
+,  "SL_chrome_Mac_10.10_65":{"base": "SauceLabs", "browserName": "chrome", "version": "65", "platform": "Mac 10.10"}  
+,  "SL_chrome_Mac_10.10_66":{"base": "SauceLabs", "browserName": "chrome", "version": "66", "platform": "Mac 10.10"}  
+,  "SL_chrome_Mac_10.10_67":{"base": "SauceLabs", "browserName": "chrome", "version": "67", "platform": "Mac 10.10"}  
+,  "SL_chrome_Mac_10.10_68":{"base": "SauceLabs", "browserName": "chrome", "version": "68", "platform": "Mac 10.10"}  
+,  "SL_chrome_Mac_10.10_beta":{"base": "SauceLabs", "browserName": "chrome", "version": "beta", "platform": "Mac 10.10"}  
+,  "SL_MicrosoftEdge_Windows_10_15":{"base": "SauceLabs", "browserName": "MicrosoftEdge", "version": "15", "platform": "Windows 10"}  
+,  "SL_safari_Mac_10.9_7":{"base": "SauceLabs", "browserName": "safari", "version": "7", "platform": "Mac 10.9"}  
+,  "SL_MicrosoftEdge_Windows_10_13":{"base": "SauceLabs", "browserName": "MicrosoftEdge", "version": "13", "platform": "Windows 10"}  
+,  "SL_internet explorer_Windows_2012_10":{"base": "SauceLabs", "browserName": "internet explorer", "version": "10", "platform": "Windows 2012"}  
+,  "SL_internet explorer_Windows_2012_R2_11":{"base": "SauceLabs", "browserName": "internet explorer", "version": "11", "platform": "Windows 2012 R2"}  
+,  "SL_MicrosoftEdge_Windows_10_17":{"base": "SauceLabs", "browserName": "MicrosoftEdge", "version": "17", "platform": "Windows 10"}  
+,  "SL_iphone_Mac_10.11_10.0":{"base": "SauceLabs", "browserName": "iphone", "version": "10.0", "platform": "Mac 10.11"}  
+,  "SL_iphone_Mac_10.11_10.2":{"base": "SauceLabs", "browserName": "iphone", "version": "10.2", "platform": "Mac 10.11"}  
+,  "SL_iphone_Mac_10.11_10.0":{"base": "SauceLabs", "browserName": "iphone", "version": "10.0", "platform": "Mac 10.11"}  
+,  "SL_iphone_Mac_10.11_10.2":{"base": "SauceLabs", "browserName": "iphone", "version": "10.2", "platform": "Mac 10.11"}  
+,  "SL_ipad_Mac_10.11_10.0":{"base": "SauceLabs", "browserName": "ipad", "version": "10.0", "platform": "Mac 10.11"}  
+,  "SL_ipad_Mac_10.11_10.2":{"base": "SauceLabs", "browserName": "ipad", "version": "10.2", "platform": "Mac 10.11"}  
+,  "SL_iphone_Mac_10.11_10.0":{"base": "SauceLabs", "browserName": "iphone", "version": "10.0", "platform": "Mac 10.11"}  
+,  "SL_iphone_Mac_10.11_10.2":{"base": "SauceLabs", "browserName": "iphone", "version": "10.2", "platform": "Mac 10.11"}  
+,  "SL_ipad_Mac_10.11_10.0":{"base": "SauceLabs", "browserName": "ipad", "version": "10.0", "platform": "Mac 10.11"}  
+,  "SL_ipad_Mac_10.11_10.2":{"base": "SauceLabs", "browserName": "ipad", "version": "10.2", "platform": "Mac 10.11"}  
+,  "SL_ipad_Mac_10.11_10.0":{"base": "SauceLabs", "browserName": "ipad", "version": "10.0", "platform": "Mac 10.11"}  
+,  "SL_ipad_Mac_10.11_10.2":{"base": "SauceLabs", "browserName": "ipad", "version": "10.2", "platform": "Mac 10.11"}  
+,  "SL_iphone_Mac_10.11_10.0":{"base": "SauceLabs", "browserName": "iphone", "version": "10.0", "platform": "Mac 10.11"}  
+,  "SL_iphone_Mac_10.11_10.2":{"base": "SauceLabs", "browserName": "iphone", "version": "10.2", "platform": "Mac 10.11"}  
+,  "SL_iphone_Mac_10.11_10.0":{"base": "SauceLabs", "browserName": "iphone", "version": "10.0", "platform": "Mac 10.11"}  
+,  "SL_iphone_Mac_10.11_10.2":{"base": "SauceLabs", "browserName": "iphone", "version": "10.2", "platform": "Mac 10.11"}  
+,  "SL_iphone_Mac_10.11_10.0":{"base": "SauceLabs", "browserName": "iphone", "version": "10.0", "platform": "Mac 10.11"}  
+,  "SL_iphone_Mac_10.11_10.2":{"base": "SauceLabs", "browserName": "iphone", "version": "10.2", "platform": "Mac 10.11"}  
+,  "SL_iphone_Mac_10.11_10.0":{"base": "SauceLabs", "browserName": "iphone", "version": "10.0", "platform": "Mac 10.11"}  
+,  "SL_iphone_Mac_10.11_10.2":{"base": "SauceLabs", "browserName": "iphone", "version": "10.2", "platform": "Mac 10.11"}  
+,  "SL_iphone_Mac_10.11_10.0":{"base": "SauceLabs", "browserName": "iphone", "version": "10.0", "platform": "Mac 10.11"}  
+,  "SL_iphone_Mac_10.11_10.2":{"base": "SauceLabs", "browserName": "iphone", "version": "10.2", "platform": "Mac 10.11"}  
+,  "SL_ipad_Mac_10.11_10.0":{"base": "SauceLabs", "browserName": "ipad", "version": "10.0", "platform": "Mac 10.11"}  
+,  "SL_ipad_Mac_10.11_10.2":{"base": "SauceLabs", "browserName": "ipad", "version": "10.2", "platform": "Mac 10.11"}  
+,  "SL_iphone_Mac_10.11_10.0":{"base": "SauceLabs", "browserName": "iphone", "version": "10.0", "platform": "Mac 10.11"}  
+,  "SL_iphone_Mac_10.11_10.2":{"base": "SauceLabs", "browserName": "iphone", "version": "10.2", "platform": "Mac 10.11"}  
+,  "SL_iphone_Mac_10.11_10.0":{"base": "SauceLabs", "browserName": "iphone", "version": "10.0", "platform": "Mac 10.11"}  
+,  "SL_iphone_Mac_10.11_10.2":{"base": "SauceLabs", "browserName": "iphone", "version": "10.2", "platform": "Mac 10.11"}  
+,  "SL_ipad_Mac_10.11_10.0":{"base": "SauceLabs", "browserName": "ipad", "version": "10.0", "platform": "Mac 10.11"}  
+,  "SL_ipad_Mac_10.11_10.2":{"base": "SauceLabs", "browserName": "ipad", "version": "10.2", "platform": "Mac 10.11"}  
+,  "SL_ipad_Mac_10.11_10.0":{"base": "SauceLabs", "browserName": "ipad", "version": "10.0", "platform": "Mac 10.11"}  
+,  "SL_ipad_Mac_10.11_10.2":{"base": "SauceLabs", "browserName": "ipad", "version": "10.2", "platform": "Mac 10.11"}  
+,  "SL_internet explorer_Windows_10_11":{"base": "SauceLabs", "browserName": "internet explorer", "version": "11", "platform": "Windows 10"}  
+,  "SL_MicrosoftEdge_Windows_10_14":{"base": "SauceLabs", "browserName": "MicrosoftEdge", "version": "14", "platform": "Windows 10"}  
+,  "SL_iphone_Mac_10.12_10.3":{"base": "SauceLabs", "browserName": "iphone", "version": "10.3", "platform": "Mac 10.12"}  
+,  "SL_iphone_Mac_10.12_11.0":{"base": "SauceLabs", "browserName": "iphone", "version": "11.0", "platform": "Mac 10.12"}  
+,  "SL_iphone_Mac_10.12_11.1":{"base": "SauceLabs", "browserName": "iphone", "version": "11.1", "platform": "Mac 10.12"}  
+,  "SL_iphone_Mac_10.12_11.2":{"base": "SauceLabs", "browserName": "iphone", "version": "11.2", "platform": "Mac 10.12"}  
+,  "SL_iphone_Mac_10.12_11.0":{"base": "SauceLabs", "browserName": "iphone", "version": "11.0", "platform": "Mac 10.12"}  
+,  "SL_iphone_Mac_10.12_11.1":{"base": "SauceLabs", "browserName": "iphone", "version": "11.1", "platform": "Mac 10.12"}  
+,  "SL_iphone_Mac_10.12_11.2":{"base": "SauceLabs", "browserName": "iphone", "version": "11.2", "platform": "Mac 10.12"}  
+,  "SL_iphone_Mac_10.12_10.3":{"base": "SauceLabs", "browserName": "iphone", "version": "10.3", "platform": "Mac 10.12"}  
+,  "SL_iphone_Mac_10.12_11.0":{"base": "SauceLabs", "browserName": "iphone", "version": "11.0", "platform": "Mac 10.12"}  
+,  "SL_iphone_Mac_10.12_11.1":{"base": "SauceLabs", "browserName": "iphone", "version": "11.1", "platform": "Mac 10.12"}  
+,  "SL_iphone_Mac_10.12_11.2":{"base": "SauceLabs", "browserName": "iphone", "version": "11.2", "platform": "Mac 10.12"}  
+,  "SL_ipad_Mac_10.12_10.3":{"base": "SauceLabs", "browserName": "ipad", "version": "10.3", "platform": "Mac 10.12"}  
+,  "SL_ipad_Mac_10.12_11.0":{"base": "SauceLabs", "browserName": "ipad", "version": "11.0", "platform": "Mac 10.12"}  
+,  "SL_ipad_Mac_10.12_11.1":{"base": "SauceLabs", "browserName": "ipad", "version": "11.1", "platform": "Mac 10.12"}  
+,  "SL_ipad_Mac_10.12_11.2":{"base": "SauceLabs", "browserName": "ipad", "version": "11.2", "platform": "Mac 10.12"}  
+,  "SL_ipad_Mac_10.12_10.3":{"base": "SauceLabs", "browserName": "ipad", "version": "10.3", "platform": "Mac 10.12"}  
+,  "SL_ipad_Mac_10.12_11.0":{"base": "SauceLabs", "browserName": "ipad", "version": "11.0", "platform": "Mac 10.12"}  
+,  "SL_ipad_Mac_10.12_11.1":{"base": "SauceLabs", "browserName": "ipad", "version": "11.1", "platform": "Mac 10.12"}  
+,  "SL_ipad_Mac_10.12_11.2":{"base": "SauceLabs", "browserName": "ipad", "version": "11.2", "platform": "Mac 10.12"}  
+,  "SL_iphone_Mac_10.12_10.3":{"base": "SauceLabs", "browserName": "iphone", "version": "10.3", "platform": "Mac 10.12"}  
+,  "SL_iphone_Mac_10.12_11.0":{"base": "SauceLabs", "browserName": "iphone", "version": "11.0", "platform": "Mac 10.12"}  
+,  "SL_iphone_Mac_10.12_11.1":{"base": "SauceLabs", "browserName": "iphone", "version": "11.1", "platform": "Mac 10.12"}  
+,  "SL_iphone_Mac_10.12_11.2":{"base": "SauceLabs", "browserName": "iphone", "version": "11.2", "platform": "Mac 10.12"}  
+,  "SL_iphone_Mac_10.12_10.3":{"base": "SauceLabs", "browserName": "iphone", "version": "10.3", "platform": "Mac 10.12"}  
+,  "SL_iphone_Mac_10.12_11.0":{"base": "SauceLabs", "browserName": "iphone", "version": "11.0", "platform": "Mac 10.12"}  
+,  "SL_iphone_Mac_10.12_11.1":{"base": "SauceLabs", "browserName": "iphone", "version": "11.1", "platform": "Mac 10.12"}  
+,  "SL_iphone_Mac_10.12_11.2":{"base": "SauceLabs", "browserName": "iphone", "version": "11.2", "platform": "Mac 10.12"}  
+,  "SL_iphone_Mac_10.12_10.3":{"base": "SauceLabs", "browserName": "iphone", "version": "10.3", "platform": "Mac 10.12"}  
+,  "SL_iphone_Mac_10.12_11.0":{"base": "SauceLabs", "browserName": "iphone", "version": "11.0", "platform": "Mac 10.12"}  
+,  "SL_iphone_Mac_10.12_11.1":{"base": "SauceLabs", "browserName": "iphone", "version": "11.1", "platform": "Mac 10.12"}  
+,  "SL_iphone_Mac_10.12_11.2":{"base": "SauceLabs", "browserName": "iphone", "version": "11.2", "platform": "Mac 10.12"}  
+,  "SL_iphone_Mac_10.12_10.3":{"base": "SauceLabs", "browserName": "iphone", "version": "10.3", "platform": "Mac 10.12"}  
+,  "SL_iphone_Mac_10.12_11.0":{"base": "SauceLabs", "browserName": "iphone", "version": "11.0", "platform": "Mac 10.12"}  
+,  "SL_iphone_Mac_10.12_11.1":{"base": "SauceLabs", "browserName": "iphone", "version": "11.1", "platform": "Mac 10.12"}  
+,  "SL_iphone_Mac_10.12_11.2":{"base": "SauceLabs", "browserName": "iphone", "version": "11.2", "platform": "Mac 10.12"}  
+,  "SL_iphone_Mac_10.12_10.3":{"base": "SauceLabs", "browserName": "iphone", "version": "10.3", "platform": "Mac 10.12"}  
+,  "SL_iphone_Mac_10.12_11.0":{"base": "SauceLabs", "browserName": "iphone", "version": "11.0", "platform": "Mac 10.12"}  
+,  "SL_iphone_Mac_10.12_11.1":{"base": "SauceLabs", "browserName": "iphone", "version": "11.1", "platform": "Mac 10.12"}  
+,  "SL_iphone_Mac_10.12_11.2":{"base": "SauceLabs", "browserName": "iphone", "version": "11.2", "platform": "Mac 10.12"}  
+,  "SL_ipad_Mac_10.12_10.3":{"base": "SauceLabs", "browserName": "ipad", "version": "10.3", "platform": "Mac 10.12"}  
+,  "SL_ipad_Mac_10.12_11.0":{"base": "SauceLabs", "browserName": "ipad", "version": "11.0", "platform": "Mac 10.12"}  
+,  "SL_ipad_Mac_10.12_11.1":{"base": "SauceLabs", "browserName": "ipad", "version": "11.1", "platform": "Mac 10.12"}  
+,  "SL_ipad_Mac_10.12_11.2":{"base": "SauceLabs", "browserName": "ipad", "version": "11.2", "platform": "Mac 10.12"}  
+,  "SL_ipad_Mac_10.12_11.0":{"base": "SauceLabs", "browserName": "ipad", "version": "11.0", "platform": "Mac 10.12"}  
+,  "SL_ipad_Mac_10.12_11.1":{"base": "SauceLabs", "browserName": "ipad", "version": "11.1", "platform": "Mac 10.12"}  
+,  "SL_ipad_Mac_10.12_11.2":{"base": "SauceLabs", "browserName": "ipad", "version": "11.2", "platform": "Mac 10.12"}  
+,  "SL_ipad_Mac_10.12_10.3":{"base": "SauceLabs", "browserName": "ipad", "version": "10.3", "platform": "Mac 10.12"}  
+,  "SL_ipad_Mac_10.12_11.0":{"base": "SauceLabs", "browserName": "ipad", "version": "11.0", "platform": "Mac 10.12"}  
+,  "SL_ipad_Mac_10.12_11.1":{"base": "SauceLabs", "browserName": "ipad", "version": "11.1", "platform": "Mac 10.12"}  
+,  "SL_ipad_Mac_10.12_11.2":{"base": "SauceLabs", "browserName": "ipad", "version": "11.2", "platform": "Mac 10.12"}  
+,  "SL_ipad_Mac_10.12_10.3":{"base": "SauceLabs", "browserName": "ipad", "version": "10.3", "platform": "Mac 10.12"}  
+,  "SL_ipad_Mac_10.12_11.0":{"base": "SauceLabs", "browserName": "ipad", "version": "11.0", "platform": "Mac 10.12"}  
+,  "SL_ipad_Mac_10.12_11.1":{"base": "SauceLabs", "browserName": "ipad", "version": "11.1", "platform": "Mac 10.12"}  
+,  "SL_ipad_Mac_10.12_11.2":{"base": "SauceLabs", "browserName": "ipad", "version": "11.2", "platform": "Mac 10.12"}  
+,  "SL_safari_Mac_10.12_10":{"base": "SauceLabs", "browserName": "safari", "version": "10", "platform": "Mac 10.12"}  
+,  "SL_iphone_Mac_10.12_10.3":{"base": "SauceLabs", "browserName": "iphone", "version": "10.3", "platform": "Mac 10.12"}  
+,  "SL_iphone_Mac_10.12_11.0":{"base": "SauceLabs", "browserName": "iphone", "version": "11.0", "platform": "Mac 10.12"}  
+,  "SL_iphone_Mac_10.12_11.1":{"base": "SauceLabs", "browserName": "iphone", "version": "11.1", "platform": "Mac 10.12"}  
+,  "SL_iphone_Mac_10.12_11.2":{"base": "SauceLabs", "browserName": "iphone", "version": "11.2", "platform": "Mac 10.12"}  
+,  "SL_iphone_Mac_10.12_11.0":{"base": "SauceLabs", "browserName": "iphone", "version": "11.0", "platform": "Mac 10.12"}  
+,  "SL_iphone_Mac_10.12_11.1":{"base": "SauceLabs", "browserName": "iphone", "version": "11.1", "platform": "Mac 10.12"}  
+,  "SL_iphone_Mac_10.12_11.2":{"base": "SauceLabs", "browserName": "iphone", "version": "11.2", "platform": "Mac 10.12"}  
+,  "SL_iphone_Mac_10.12_10.3":{"base": "SauceLabs", "browserName": "iphone", "version": "10.3", "platform": "Mac 10.12"}  
+,  "SL_iphone_Mac_10.12_11.0":{"base": "SauceLabs", "browserName": "iphone", "version": "11.0", "platform": "Mac 10.12"}  
+,  "SL_iphone_Mac_10.12_11.1":{"base": "SauceLabs", "browserName": "iphone", "version": "11.1", "platform": "Mac 10.12"}  
+,  "SL_iphone_Mac_10.12_11.2":{"base": "SauceLabs", "browserName": "iphone", "version": "11.2", "platform": "Mac 10.12"}  
+,  "SL_iphone_Mac_10.12_10.3":{"base": "SauceLabs", "browserName": "iphone", "version": "10.3", "platform": "Mac 10.12"}  
+,  "SL_iphone_Mac_10.12_11.0":{"base": "SauceLabs", "browserName": "iphone", "version": "11.0", "platform": "Mac 10.12"}  
+,  "SL_iphone_Mac_10.12_11.1":{"base": "SauceLabs", "browserName": "iphone", "version": "11.1", "platform": "Mac 10.12"}  
+,  "SL_iphone_Mac_10.12_11.2":{"base": "SauceLabs", "browserName": "iphone", "version": "11.2", "platform": "Mac 10.12"}  
+,  "SL_ipad_Mac_10.12_11.0":{"base": "SauceLabs", "browserName": "ipad", "version": "11.0", "platform": "Mac 10.12"}  
+,  "SL_ipad_Mac_10.12_11.1":{"base": "SauceLabs", "browserName": "ipad", "version": "11.1", "platform": "Mac 10.12"}  
+,  "SL_ipad_Mac_10.12_11.2":{"base": "SauceLabs", "browserName": "ipad", "version": "11.2", "platform": "Mac 10.12"}  
+,  "SL_ipad_Mac_10.12_11.0":{"base": "SauceLabs", "browserName": "ipad", "version": "11.0", "platform": "Mac 10.12"}  
+,  "SL_ipad_Mac_10.12_11.1":{"base": "SauceLabs", "browserName": "ipad", "version": "11.1", "platform": "Mac 10.12"}  
+,  "SL_ipad_Mac_10.12_11.2":{"base": "SauceLabs", "browserName": "ipad", "version": "11.2", "platform": "Mac 10.12"}  
+,  "SL_internet explorer_Windows_2008_8":{"base": "SauceLabs", "browserName": "internet explorer", "version": "8", "platform": "Windows 2008"}  
+,  "SL_internet explorer_Windows_2008_11":{"base": "SauceLabs", "browserName": "internet explorer", "version": "11", "platform": "Windows 2008"}  
+,  "SL_iphone_Mac_10.11_9.3":{"base": "SauceLabs", "browserName": "iphone", "version": "9.3", "platform": "Mac 10.11"}  
+,  "SL_safari_Mac_10.11_9":{"base": "SauceLabs", "browserName": "safari", "version": "9", "platform": "Mac 10.11"}  
+,  "SL_iphone_Mac_10.11_9.3":{"base": "SauceLabs", "browserName": "iphone", "version": "9.3", "platform": "Mac 10.11"}  
+,  "SL_ipad_Mac_10.11_9.3":{"base": "SauceLabs", "browserName": "ipad", "version": "9.3", "platform": "Mac 10.11"}  
+,  "SL_iphone_Mac_10.11_9.3":{"base": "SauceLabs", "browserName": "iphone", "version": "9.3", "platform": "Mac 10.11"}  
+,  "SL_ipad_Mac_10.11_9.3":{"base": "SauceLabs", "browserName": "ipad", "version": "9.3", "platform": "Mac 10.11"}  
+,  "SL_ipad_Mac_10.11_9.3":{"base": "SauceLabs", "browserName": "ipad", "version": "9.3", "platform": "Mac 10.11"}  
+,  "SL_ipad_Mac_10.11_9.3":{"base": "SauceLabs", "browserName": "ipad", "version": "9.3", "platform": "Mac 10.11"}  
+,  "SL_iphone_Mac_10.11_9.3":{"base": "SauceLabs", "browserName": "iphone", "version": "9.3", "platform": "Mac 10.11"}  
+,  "SL_iphone_Mac_10.11_9.3":{"base": "SauceLabs", "browserName": "iphone", "version": "9.3", "platform": "Mac 10.11"}  
+,  "SL_iphone_Mac_10.11_9.3":{"base": "SauceLabs", "browserName": "iphone", "version": "9.3", "platform": "Mac 10.11"}  
+,  "SL_ipad_Mac_10.11_9.3":{"base": "SauceLabs", "browserName": "ipad", "version": "9.3", "platform": "Mac 10.11"}  
+,  "SL_iphone_Mac_10.11_9.3":{"base": "SauceLabs", "browserName": "iphone", "version": "9.3", "platform": "Mac 10.11"}  
+,  "SL_iphone_Mac_10.11_9.3":{"base": "SauceLabs", "browserName": "iphone", "version": "9.3", "platform": "Mac 10.11"}  
+,  "SL_ipad_Mac_10.11_9.3":{"base": "SauceLabs", "browserName": "ipad", "version": "9.3", "platform": "Mac 10.11"}  
+,  "SL_MicrosoftEdge_Windows_10_16":{"base": "SauceLabs", "browserName": "MicrosoftEdge", "version": "16", "platform": "Windows 10"}  
+,  "SL_safari_Mac_10.11_10":{"base": "SauceLabs", "browserName": "safari", "version": "10", "platform": "Mac 10.11"}  
+,  "SL_internet explorer_Windows_2008_10":{"base": "SauceLabs", "browserName": "internet explorer", "version": "10", "platform": "Windows 2008"}  
+,  "SL_ipad_Mac_10.13_11.3":{"base": "SauceLabs", "browserName": "ipad", "version": "11.3", "platform": "Mac 10.13"}  
+,  "SL_iphone_Mac_10.13_11.3":{"base": "SauceLabs", "browserName": "iphone", "version": "11.3", "platform": "Mac 10.13"}  
+,  "SL_iphone_Mac_10.13_11.3":{"base": "SauceLabs", "browserName": "iphone", "version": "11.3", "platform": "Mac 10.13"}  
+,  "SL_ipad_Mac_10.13_11.3":{"base": "SauceLabs", "browserName": "ipad", "version": "11.3", "platform": "Mac 10.13"}  
+,  "SL_iphone_Mac_10.13_11.3":{"base": "SauceLabs", "browserName": "iphone", "version": "11.3", "platform": "Mac 10.13"}  
+,  "SL_iphone_Mac_10.13_11.3":{"base": "SauceLabs", "browserName": "iphone", "version": "11.3", "platform": "Mac 10.13"}  
+,  "SL_iphone_Mac_10.13_11.3":{"base": "SauceLabs", "browserName": "iphone", "version": "11.3", "platform": "Mac 10.13"}  
+,  "SL_iphone_Mac_10.13_11.3":{"base": "SauceLabs", "browserName": "iphone", "version": "11.3", "platform": "Mac 10.13"}  
+,  "SL_iphone_Mac_10.13_11.3":{"base": "SauceLabs", "browserName": "iphone", "version": "11.3", "platform": "Mac 10.13"}  
+,  "SL_iphone_Mac_10.13_11.3":{"base": "SauceLabs", "browserName": "iphone", "version": "11.3", "platform": "Mac 10.13"}  
+,  "SL_iphone_Mac_10.13_11.3":{"base": "SauceLabs", "browserName": "iphone", "version": "11.3", "platform": "Mac 10.13"}  
+,  "SL_ipad_Mac_10.13_11.3":{"base": "SauceLabs", "browserName": "ipad", "version": "11.3", "platform": "Mac 10.13"}  
+,  "SL_ipad_Mac_10.13_11.3":{"base": "SauceLabs", "browserName": "ipad", "version": "11.3", "platform": "Mac 10.13"}  
+,  "SL_ipad_Mac_10.13_11.3":{"base": "SauceLabs", "browserName": "ipad", "version": "11.3", "platform": "Mac 10.13"}  
+,  "SL_ipad_Mac_10.13_11.3":{"base": "SauceLabs", "browserName": "ipad", "version": "11.3", "platform": "Mac 10.13"}  
+,  "SL_safari_Mac_10.13_11":{"base": "SauceLabs", "browserName": "safari", "version": "11", "platform": "Mac 10.13"}  
+,  "SL_iphone_Mac_10.13_11.3":{"base": "SauceLabs", "browserName": "iphone", "version": "11.3", "platform": "Mac 10.13"}  
+,  "SL_iphone_Mac_10.13_11.3":{"base": "SauceLabs", "browserName": "iphone", "version": "11.3", "platform": "Mac 10.13"}  
+,  "SL_iphone_Mac_10.13_11.3":{"base": "SauceLabs", "browserName": "iphone", "version": "11.3", "platform": "Mac 10.13"}  
+,  "SL_iphone_Mac_10.13_11.3":{"base": "SauceLabs", "browserName": "iphone", "version": "11.3", "platform": "Mac 10.13"}  
+,  "SL_ipad_Mac_10.13_11.3":{"base": "SauceLabs", "browserName": "ipad", "version": "11.3", "platform": "Mac 10.13"}  
+,  "SL_ipad_Mac_10.13_11.3":{"base": "SauceLabs", "browserName": "ipad", "version": "11.3", "platform": "Mac 10.13"}  
+,  "SL_safari_Mac_10.10_8":{"base": "SauceLabs", "browserName": "safari", "version": "8", "platform": "Mac 10.10"}  
+,  "SL_android_Linux_7.0":{"base": "SauceLabs", "browserName": "android", "version": "7.0", "platform": "Linux"}  
+,  "SL_android_Linux_7.1":{"base": "SauceLabs", "browserName": "android", "version": "7.1", "platform": "Linux"}  
+,  "SL_android_Linux_7.0":{"base": "SauceLabs", "browserName": "android", "version": "7.0", "platform": "Linux"}  
+,  "SL_android_Linux_7.1":{"base": "SauceLabs", "browserName": "android", "version": "7.1", "platform": "Linux"}  
+,  "SL_android_Linux_7.0":{"base": "SauceLabs", "browserName": "android", "version": "7.0", "platform": "Linux"}  
+,  "SL_android_Linux_7.1":{"base": "SauceLabs", "browserName": "android", "version": "7.1", "platform": "Linux"}  
+,  "SL_android_Linux_7.0":{"base": "SauceLabs", "browserName": "android", "version": "7.0", "platform": "Linux"}  
+,  "SL_android_Linux_7.1":{"base": "SauceLabs", "browserName": "android", "version": "7.1", "platform": "Linux"}  
+,  "SL_android_Linux_4.4":{"base": "SauceLabs", "browserName": "android", "version": "4.4", "platform": "Linux"}  
+,  "SL_android_Linux_7.0":{"base": "SauceLabs", "browserName": "android", "version": "7.0", "platform": "Linux"}  
+,  "SL_android_Linux_7.1":{"base": "SauceLabs", "browserName": "android", "version": "7.1", "platform": "Linux"}  
+,  "SL_android_Linux_7.0":{"base": "SauceLabs", "browserName": "android", "version": "7.0", "platform": "Linux"}  
+,  "SL_android_Linux_7.1":{"base": "SauceLabs", "browserName": "android", "version": "7.1", "platform": "Linux"}  
+,  "SL_android_Linux_7.0":{"base": "SauceLabs", "browserName": "android", "version": "7.0", "platform": "Linux"}  
+,  "SL_android_Linux_7.1":{"base": "SauceLabs", "browserName": "android", "version": "7.1", "platform": "Linux"}  
+,  "SL_android_Linux_7.0":{"base": "SauceLabs", "browserName": "android", "version": "7.0", "platform": "Linux"}  
+,  "SL_android_Linux_7.1":{"base": "SauceLabs", "browserName": "android", "version": "7.1", "platform": "Linux"}  
+,  "SL_android_Linux_7.0":{"base": "SauceLabs", "browserName": "android", "version": "7.0", "platform": "Linux"}  
+,  "SL_android_Linux_7.1":{"base": "SauceLabs", "browserName": "android", "version": "7.1", "platform": "Linux"}  
+,  "SL_android_Linux_7.0":{"base": "SauceLabs", "browserName": "android", "version": "7.0", "platform": "Linux"}  
+,  "SL_android_Linux_7.1":{"base": "SauceLabs", "browserName": "android", "version": "7.1", "platform": "Linux"}  
+,  "SL_android_Linux_7.0":{"base": "SauceLabs", "browserName": "android", "version": "7.0", "platform": "Linux"}  
+,  "SL_android_Linux_7.1":{"base": "SauceLabs", "browserName": "android", "version": "7.1", "platform": "Linux"}  
+,  "SL_android_Linux_7.0":{"base": "SauceLabs", "browserName": "android", "version": "7.0", "platform": "Linux"}  
+,  "SL_android_Linux_7.1":{"base": "SauceLabs", "browserName": "android", "version": "7.1", "platform": "Linux"}  
+,  "SL_android_Linux_4.4":{"base": "SauceLabs", "browserName": "android", "version": "4.4", "platform": "Linux"}  
+,  "SL_android_Linux_4.4":{"base": "SauceLabs", "browserName": "android", "version": "4.4", "platform": "Linux"}  
+,  "SL_android_Linux_5.0":{"base": "SauceLabs", "browserName": "android", "version": "5.0", "platform": "Linux"}  
+,  "SL_android_Linux_5.1":{"base": "SauceLabs", "browserName": "android", "version": "5.1", "platform": "Linux"}  
+,  "SL_android_Linux_6.0":{"base": "SauceLabs", "browserName": "android", "version": "6.0", "platform": "Linux"}  
+,  "SL_android_Linux_4.4":{"base": "SauceLabs", "browserName": "android", "version": "4.4", "platform": "Linux"}  
+,  "SL_android_Linux_7.0":{"base": "SauceLabs", "browserName": "android", "version": "7.0", "platform": "Linux"}  
+,  "SL_android_Linux_7.1":{"base": "SauceLabs", "browserName": "android", "version": "7.1", "platform": "Linux"}  
+,  "SL_android_Linux_7.0":{"base": "SauceLabs", "browserName": "android", "version": "7.0", "platform": "Linux"}  
+,  "SL_android_Linux_7.1":{"base": "SauceLabs", "browserName": "android", "version": "7.1", "platform": "Linux"}  
+,  "SL_android_Linux_7.0":{"base": "SauceLabs", "browserName": "android", "version": "7.0", "platform": "Linux"}  
+,  "SL_android_Linux_7.1":{"base": "SauceLabs", "browserName": "android", "version": "7.1", "platform": "Linux"}  
+,  "SL_android_Linux_4.4":{"base": "SauceLabs", "browserName": "android", "version": "4.4", "platform": "Linux"}  
+,  "SL_android_Linux_7.0":{"base": "SauceLabs", "browserName": "android", "version": "7.0", "platform": "Linux"}  
+,  "SL_android_Linux_7.1":{"base": "SauceLabs", "browserName": "android", "version": "7.1", "platform": "Linux"}  
+,  "SL_android_Linux_4.4":{"base": "SauceLabs", "browserName": "android", "version": "4.4", "platform": "Linux"}  
+,  "SL_android_Linux_7.0":{"base": "SauceLabs", "browserName": "android", "version": "7.0", "platform": "Linux"}  
+,  "SL_android_Linux_7.1":{"base": "SauceLabs", "browserName": "android", "version": "7.1", "platform": "Linux"}  
+,  "SL_android_Linux_4.4":{"base": "SauceLabs", "browserName": "android", "version": "4.4", "platform": "Linux"}  
+,  "SL_android_Linux_7.0":{"base": "SauceLabs", "browserName": "android", "version": "7.0", "platform": "Linux"}  
+,  "SL_android_Linux_7.1":{"base": "SauceLabs", "browserName": "android", "version": "7.1", "platform": "Linux"}  
+,  "SL_android_Linux_7.0":{"base": "SauceLabs", "browserName": "android", "version": "7.0", "platform": "Linux"}  
+,  "SL_android_Linux_7.1":{"base": "SauceLabs", "browserName": "android", "version": "7.1", "platform": "Linux"}  
+,  "SL_android_Linux_7.0":{"base": "SauceLabs", "browserName": "android", "version": "7.0", "platform": "Linux"}  
+,  "SL_android_Linux_7.1":{"base": "SauceLabs", "browserName": "android", "version": "7.1", "platform": "Linux"}  
+,  "SL_android_Linux_7.0":{"base": "SauceLabs", "browserName": "android", "version": "7.0", "platform": "Linux"}  
+,  "SL_android_Linux_7.1":{"base": "SauceLabs", "browserName": "android", "version": "7.1", "platform": "Linux"}  
+,  "SL_android_Linux_7.0":{"base": "SauceLabs", "browserName": "android", "version": "7.0", "platform": "Linux"}  
+,  "SL_android_Linux_7.1":{"base": "SauceLabs", "browserName": "android", "version": "7.1", "platform": "Linux"}  
+,  "SL_android_Linux_7.0":{"base": "SauceLabs", "browserName": "android", "version": "7.0", "platform": "Linux"}  
+,  "SL_android_Linux_7.1":{"base": "SauceLabs", "browserName": "android", "version": "7.1", "platform": "Linux"}  
+,  "SL_android_Linux_7.0":{"base": "SauceLabs", "browserName": "android", "version": "7.0", "platform": "Linux"}  
+,  "SL_android_Linux_7.1":{"base": "SauceLabs", "browserName": "android", "version": "7.1", "platform": "Linux"}  
+,  "SL_android_Linux_4.4":{"base": "SauceLabs", "browserName": "android", "version": "4.4", "platform": "Linux"}  
+,  "SL_android_Linux_7.0":{"base": "SauceLabs", "browserName": "android", "version": "7.0", "platform": "Linux"}  
+,  "SL_android_Linux_7.1":{"base": "SauceLabs", "browserName": "android", "version": "7.1", "platform": "Linux"}  
+,  "SL_android_Linux_7.0":{"base": "SauceLabs", "browserName": "android", "version": "7.0", "platform": "Linux"}  
+,  "SL_android_Linux_7.1":{"base": "SauceLabs", "browserName": "android", "version": "7.1", "platform": "Linux"}  
+,  "SL_android_Linux_7.0":{"base": "SauceLabs", "browserName": "android", "version": "7.0", "platform": "Linux"}  
+,  "SL_android_Linux_7.1":{"base": "SauceLabs", "browserName": "android", "version": "7.1", "platform": "Linux"}  
+,  "SL_safari_Mac_10.12_11":{"base": "SauceLabs", "browserName": "safari", "version": "11", "platform": "Mac 10.12"}  
+,  "SL_internet explorer_Windows_2008_9":{"base": "SauceLabs", "browserName": "internet explorer", "version": "9", "platform": "Windows 2008"}   } 

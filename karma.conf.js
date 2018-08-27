@@ -56,9 +56,22 @@ module.exports = function(config) {
     autoWatch: true,
 
 
+    customLaunchers: {
+      SmallHeadlessChrome: {
+        base: 'ChromeHeadless',
+        flags: ['--disable-translate', '--disable-extensions', '--remote-debugging-port=9222'
+        , '--window-size=412,732']
+      }
+      , LargeHeadlessChrome: {
+        base: 'ChromeHeadless',
+        flags: ['--disable-translate', '--disable-extensions', '--remote-debugging-port=9222'
+        , '--window-size=1412,1732']
+      }
+    }
+
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome', 'Firefox', 'Edge', 'IE'],
+    , browsers: ['SmallHeadlessChrome', 'Firefox', 'Edge', 'IE'],
 
 
     // Continuous Integration mode

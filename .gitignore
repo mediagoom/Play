@@ -3,6 +3,8 @@
 
 /index.js*
 
+saucelab-*.ps1
+
 # User-specific files
 *.suo
 *.user
