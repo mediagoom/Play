@@ -24,8 +24,6 @@ function html5embed(
 
     let opt = Object.assign(defopt, options);
 
-    
-
     var obj  = '<video '
         obj += ' id="';
         obj += id

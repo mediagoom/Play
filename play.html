@@ -6,7 +6,7 @@
 
     <title>MediaGoom Player</title>
    
-    <link href="style/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
 
     <style>
         body
@@ -56,10 +56,15 @@
         }
     </style>
 
-    <script src="scripts/jquery-1.9.0.min.js"></script>
-    <script src="scripts/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+        crossorigin="anonymous"></script>
 
-    <script src="src/bundle.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script crossorigin src="https://unpkg.com/dashjs@2.9.0/dist/dash.mediaplayer.min.js"></script>
+
+    <script src="lib/bundle.js"></script>
  
     <meta name="viewport" content="width=device-width, initial-scale=1">
    
@@ -68,6 +73,7 @@
 
     <script>
         
+        localStorage.debug = 'mgplay:*';
         
         function get_default_options()
         {
