@@ -4,15 +4,13 @@
   "description": "The mg player",
   "main": "index.js",
   "scripts": {
-    "dev": "npm run watch-js & npm run serve",
-    "watch-js": "watchify -d -p [ browserify-livereload --host 127.0.0.1 --port 1337 ] -t [ babelify --presets [ es2015 ] ] src/main.js -o src/bundle.js -v",
     "serve": "http-server -o",
     "karma": "node ./node_modules/karma/bin/karma start",
     "test": "node ./node_modules/karma/bin/karma start --single-run --no-auto-watch",
     "localtest": "node ./node_modules/karma/bin/karma start --single-run --no-auto-watch --testuri=http://localhost/video/002569741225_Sintel_2010_1080p_mkv/STATIC",
     "souce": "node ./node_modules/karma/bin/karma start ./karma.conf.soucelabs.js",
-    "package": "browserify src/play.js --standalone mgplay --debug -t [ babelify --presets [ es2015 ] ] | exorcist index.js.map > index.js",
-    "bundle": "browserify -t [ babelify ] src/main.js -o src/bundle.js -v"
+    "package": "node ./node_modules/rollup/bin/rollup -c",
+    "bundle": "node ./node_modules/rollup/bin/rollup -c"
   },
   "repository": {
     "type": "git",
@@ -51,14 +49,9 @@
     "rollup-plugin-commonjs": "^9.1.6",
     "rollup-plugin-node-builtins": "^2.1.2",
     "rollup-plugin-node-globals": "^1.2.1",
-    "rollup-plugin-node-resolve": "^3.3.0",
-    "watchify": "^3.7.0",
-    "babelify": "^7.3.0",
-    "browserify": "^16.2.2",
-    "browserify-livereload": "^1.0.8"
+    "rollup-plugin-node-resolve": "^3.3.0"
   },
   "dependencies": {
-    "dashjs": "2.4.1",
     "debug": "^3.1.0",
     "urijs": "^1.18.9"
   }

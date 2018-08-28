@@ -17,7 +17,8 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-        'src/bundle.js'
+        'https://unpkg.com/dashjs@2.9.0/dist/dash.mediaplayer.min.js'
+      , 'lib/bundle.js'
       , 'src/test/**/*.js'
     ],
 
