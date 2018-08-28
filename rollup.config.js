@@ -30,7 +30,7 @@ export default {
           exclude: 'node_modules/**'
         , babelrc: false
         , presets: [['@babel/env', { modules: false }]]
-        //, plugins: ['@babel/external-helpers']
+        , plugins: ['@babel/plugin-transform-object-assign']
         //, externalHelpers: true
       })
   ]
