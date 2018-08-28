@@ -16,6 +16,8 @@ image:
 
 build: off
 
+stack: node 8
+
 # Install Chrome.
 install:
   - sh : sudo curl -sS -o - https://dl-ssl.google.com/linux/linux_signing_key.pub > google.key
