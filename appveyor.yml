@@ -38,7 +38,7 @@ build_script:
 
 # to run your custom scripts instead of automatic tests
 test_script:
-  - cmd: npm test -- --browsers "Firefox,Chrome,IE"
+  - cmd: npm test -- --browsers "Firefox,SmallHeadlessChrome,IE"
   - sh: npm test -- --browsers "SmallHeadlessChrome"
 
 #---------------------------------#
