@@ -1,4 +1,4 @@
-import { EventEmitter } from "events";
+import {basepack, PLAYEVENT} from "./basepack.js";
 import dashjs from 'dashjs';
 
 function dodash(myself,    src
@@ -28,7 +28,7 @@ function dodash(myself,    src
     
     myself.dashplayer.on(dashjs.MediaPlayer.events.PLAYBACK_STARTED, function()
     {
-        myself.emit("started");
+        myself.raiseEvent(myself.events.STARTED);
         
     }, null);
     
@@ -37,7 +37,7 @@ function dodash(myself,    src
   
 }
 
-export default class dashpack extends EventEmitter {
+export default class dashpack  extends basepack {
 
     constructor(options) {
         super();
@@ -58,6 +58,16 @@ export default class dashpack extends EventEmitter {
     time()
     {
         return this.dashplayer.time();
+    }
+
+    get duration()
+    {
+        return this.dashplayer.duration();
+    }
+
+    get name()
+    {
+        return "dashjs";
     }
 
 

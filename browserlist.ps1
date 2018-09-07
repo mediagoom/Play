@@ -2,6 +2,8 @@ param([bool] $filter = $true, [string] $prefix = "./saucelab")
 
 $b = Invoke-RestMethod 'https://saucelabs.com/rest/v1/info/browsers/webdriver'
 
+$b | out-file "browserlist.tmp" -encoding ascii;
+
 $j = @();
 
 $file = "./browserlist.json";
@@ -89,7 +91,7 @@ transform $j[$j.length - 1] ", " " } "
 $j = ConvertFrom-Json (gc $file | out-string)
 $props = $j | get-member | ? {$_.MemberType -eq 'NoteProperty'}
 
-$max = 5;
+$max = 3;
 $l = $props.length;
 [int] $jump = $l / $max;
 
@@ -100,7 +102,38 @@ for($i = 0; $i -lt ($max + 1); $i++)
 {
     $ff = "$prefix-$i.ps1"
 
-    "" | out-file $ff -encoding ascii;
+    $ps1 = @"
+    function do_test(`$envvar, `$progress){
+        `$env:SAUCE_SELENIUM_BROWSER="`$envvar";
+        #`$res = node .\index.js;
+        `$proc = Start-Process -filePath 'node.exe' -ArgumentList './index.js' -RedirectStandardOutput stdout.txt -RedirectStandardError stderr.txt -PassThru
+        `$proc | Wait-Process -Timeout 600 -ErrorAction 0 -ErrorVariable timeouted
+        #if(0 -ne `$LASTEXITCODE)
+
+        `$F = 'FAILED';
+
+        if(`$timeouted)
+        {
+            # terminate the process
+            `$proc | kill
+            `$F="TIMEOUT";
+        }
+
+        `$res = gc stdout.txt
+        `$res += gc stderr.txt
+ 
+        if(`$timeouted -or 0 -ne `$proc.ExitCode)
+        {
+            `"`$res`" | out-file 'selenium.txt' -append
+            "`$progress``t`$env:SAUCE_SELENIUM_BROWSER``t`$F`" | out-host
+        }else
+        {
+            "`$progress``t`$env:SAUCE_SELENIUM_BROWSER``tSUCCESSED`" | out-host
+        }
+    }
+"@
+
+    "$ps1" | out-file $ff -encoding ascii;
 
     $v = 0;
 
@@ -133,19 +166,8 @@ for($i = 0; $i -lt ($max + 1); $i++)
 
         #"`$env:SAUCE_SELENIUM_BROWSER=`"$($p.browserName):$($p.version):$($p.platform)`";`r`n`$res = node .\index.js;if(0 -ne `$LASTEXITCODE){`"`$res`" | out-file 'selenium.txt' -append}`r`n" | out-file $ff -append -encoding ascii;
         
-        $ps1 = @"
-        `$env:SAUCE_SELENIUM_BROWSER=`"$envvar`";
-        `$res = node .\index.js;
-        if(0 -ne `$LASTEXITCODE)
-        {
-            `"`$res`" | out-file 'selenium.txt' -append
-            `"$progress``t`$env:SAUCE_SELENIUM_BROWSER``tFAILED`" | out-host
-        }else
-        {
-            `"$progress``t`$env:SAUCE_SELENIUM_BROWSER``tSUCCESSED`" | out-host
-        }
-
-"@;
+        $ps1 = "do_test `"$envvar`" `"$progress`";`n"
+        
         $ps1 | out-file $ff -append -encoding ascii;
     }
 }

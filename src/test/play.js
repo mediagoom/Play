@@ -4,6 +4,10 @@ const dbg = console.log
 
 var TEST_URL = 'https://defgroupdisks.blob.core.windows.net/builds/PLAY/STATIC';
 
+var started = null;
+var url = null;
+var player = null;
+
 function testuri()
 {
     dbg("karma args: ", __karma__.config.args);
@@ -52,11 +56,23 @@ describe('Player', function() {
         const options = {muted: true};
 
         var p = window.mgPlayer(options);
-        var started = false;
+        started = false;
+        url = null;
+        player = null;
             
-        p.on("started", function() { 
+        p.on(p.events.STARTED, function() { 
             log("starting playing")
             started = true;
+        });
+
+        p.on(p.events.URL, function(rhs) { 
+            log("playing " + rhs)
+            url = rhs;
+        });
+
+        p.on(p.events.PLAYER, function(rhs) { 
+            log("player " + rhs)
+            player = rhs;
         });
 
         var p1 = -1;
@@ -73,9 +89,12 @@ describe('Player', function() {
             log("ClearKey " + p.detector.drm['org.w3.clearkey']);
             log("PlayReady " + p.detector.drm['com.microsoft.playready']);
 
-            //expect(started).to.be.equal(true);
+            expect(started).to.be.equal(true);
+            expect(p.duration).to.be.greaterThan(0);
             expect((p1 > 0)).to.be.equal(true);
-            
+            should.exist(url);
+            should.exist(player);
+           
             p.pause();
 
             var t1 = p.time();
@@ -109,7 +128,7 @@ describe('Player', function() {
         //expect(  ).to.be.equal(false);
     });
 
-    it('dashjs', function(done) {
+    it('hls or dash', function(done) {
         
             var p = test_player(done); 
             if(p.detector.HLSNative())
@@ -123,11 +142,9 @@ describe('Player', function() {
 
             log('dahsjs test playing');
 
-             
-        
     });
 
-    it('status.json', function(done) {
+    it('test info.json', function(done) {
         
         var info = {
             
