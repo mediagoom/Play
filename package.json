@@ -1,11 +1,14 @@
 {
+  
   "name": "mgplay",
   "version": "0.0.3",
   "description": "The mg player",
   "main": "index.js",
   "scripts": {
+    "start": "devman",
     "serve": "http-server -o",
     "karma": "node ./node_modules/karma/bin/karma start",
+    "krun" : "karma run",
     "test": "node ./node_modules/karma/bin/karma start --single-run --no-auto-watch",
     "localtest": "node ./node_modules/karma/bin/karma start --single-run --no-auto-watch --testuri=http://localhost/video/002569741225_Sintel_2010_1080p_mkv/STATIC",
     "souce": "node ./node_modules/karma/bin/karma start ./karma.conf.soucelabs.js",
@@ -32,6 +35,7 @@
     "@babel/plugin-external-helpers": "7.0.0",
     "@babel/plugin-transform-object-assign": "7.0.0",
     "@babel/preset-env": "7.0.0",
+    "@mediagoom/devman": "0.0.6",
     "babel-cli": "^6.26.0",
     "chai": "^3.5.0",
     "exorcist": "^1.0.1",

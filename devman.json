@@ -1,0 +1,47 @@
+{
+    "proc" : [
+        {
+              "name"  : "karma"
+            , "watch" : []
+            , "cmd"   : {"proc": "node", "args": ["./node_modules/karma/bin/karma", "start"]}
+            , "debug" : false 
+            , "break" : false
+            , "options" : { "env":{
+                                     "DEVMANID" : "PROCESS-1"
+                                     , "CONSOLECHAR" : "[1]"
+                                  }
+                          }
+         }
+         , 
+         {
+              "name"  : "serve"
+            , "watch" : []
+            , "cmd"   : {"proc": "npm", "args": ["run", "serve"]}
+            , "debug" : false 
+            , "break" : false
+            , "options" : { "env":{
+                                      "DEVMANID" : "PROCESS-2"
+                                    , "CONSOLECHAR" : "[2]"
+                                  }
+                            , "shell" : true
+                          }
+                          
+         }
+         , 
+         {
+              "name"  : "re-bundler"
+            , "watch" : ["src/*.js"]
+            , "exec"   : ["npm run bundle"]
+            , "debug" : false 
+            , "break" : false
+            , "options" : { "env":{
+                                      "DEVMANID" : "PROCESS-2"
+                                    , "CONSOLECHAR" : "[2]"
+                                  }
+                          }
+                          
+         }
+
+    ]
+
+}

@@ -1,9 +1,11 @@
 import { EventEmitter } from "events";
-import dashpack from './dashpack';
-import videopack from './videopack';
+import {PLAYEVENT} from "./packs/basepack.js";
+import dashpack from './packs/dashpack';
+import videopack from './packs/nativepack';
 import detector from './detector';
 import urijs from 'urijs';
 import dbgmodule from 'debug';
+
 
 const dbg = dbgmodule('mgplay:play');
 //localStorage.debug = 'mgplay:*'
@@ -41,8 +43,7 @@ function html5embed(
         obj += 'width: 100%; height: auto;'
         obj += '" '
     }
-    
-
+ 
     if (opt.controls)
         obj += 'controls';
 
@@ -87,7 +88,7 @@ function absolute(base, move)
 
 function registerevents(myself)
 {
-    myself.player.on("started", () => myself.emit("started"));
+    myself.player.on(myself.player.events.STARTED, () => myself.emit(myself.events.STARTED));
 }
 
 export default class mgPlayer extends EventEmitter {
@@ -104,33 +105,17 @@ export default class mgPlayer extends EventEmitter {
         };
 
         this.options = Object.assign(defopt, options);
-        /*
-        if(null == this.options.width || null == this.options.height)
-        {
-
-            let div    = document.getElementById(this.options.hostid);
-
-            let width  = div.clientWidth * 0.8;
-
-            let height = width / 16 * 9;
-
-                width  = Math.floor(width);
-                height = Math.floor(height);
-
-                if(null == this.options.width)
-                    this.options.width = width;
-
-                if(null == this.options.height)
-                    this.options.height = height;
-        }*/
-
+       
         this.tag = null; 
         this.player = null;
         this.detector = new detector();
     }
 
+    get events(){ return PLAYEVENT; }
+
     _loadplayer(player, url, poster)
     {
+       
        let v5 = html5embed(null, poster, this.options.id, this.options);
        let div = document.getElementById(this.options.hostid);
            div.innerHTML = v5;
@@ -138,6 +123,9 @@ export default class mgPlayer extends EventEmitter {
        this.player = player;
        registerevents(this);
        
+       this.emit(this.events.PLAYER, this.player.name);
+       this.emit(this.events.URL, url);
+
        this.player.play(url, this.options.id, poster, this.options.autoplay);
     }
 
@@ -213,7 +201,7 @@ export default class mgPlayer extends EventEmitter {
         {
             dbg("DASH", infouri, info.dash, absolute(infouri, info.dash));
             this.playdash(absolute(infouri, info.dash), poster);
-            return;
+            return true;
 
         }
 
@@ -223,13 +211,15 @@ export default class mgPlayer extends EventEmitter {
         {
             dbg("HLS", infouri, hlsuri, absolute(infouri, hlsuri));
             this.playhls(absolute(infouri, hlsuri), poster);
-            return;
+            return true;
 
         }
 
         dbg("CANNOT FIND A VALID PLUGIN PLAYER");
 
-        throw new Error('Cannot find a valid player url configuration');
+        const msg = 'Cannot find a valid player url configuration';
+
+        return false;
 
     }
 
@@ -243,5 +233,9 @@ export default class mgPlayer extends EventEmitter {
         return this.player.time();
     }
 
+    get duration()
+    {
+        return this.player.duration;
+    }
 
 }

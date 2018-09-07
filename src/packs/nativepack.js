@@ -1,4 +1,4 @@
-import { EventEmitter } from "events";
+import {basepack, PLAYEVENT} from "./basepack.js";
 
 function dovideo(myself,    src
     , id, autoplay)
@@ -24,7 +24,9 @@ function dovideo(myself,    src
     
     myself.videoplayer.onplay = function()
     {
-        myself.emit("started");
+        //myself.emit("started");
+
+        myself.raiseEvent(myself.events.STARTED);
         
     };
     
@@ -35,7 +37,7 @@ function dovideo(myself,    src
 
 }
 
-export default class videopack extends EventEmitter {
+export default class videopack extends basepack {
 
     constructor(options) {
         super();
@@ -63,6 +65,17 @@ export default class videopack extends EventEmitter {
 
         return played.end(played.length - 1);
     }
+
+    get duration()
+    {
+        return this.videoplayer.duration;
+    }
+
+    get name()
+    {
+        return "html5";
+    }
+
 
 
 }

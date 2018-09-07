@@ -54,6 +54,26 @@
             margin-left: auto;
             margin-right: auto;
         }
+
+        .textinfo
+        {
+            color: black;
+        }
+
+        @media screen and (min-width: 0px) and (max-width: 250px) {
+            #play-url-uix { display: none; }  /* hide it elsewhere */
+            #player-title { font-size: 10px;}
+        }
+
+        @media screen and (min-width: 251px) and (max-width: 600px) {
+            #play-url-uix { display: none; }  /* hide it elsewhere */
+            #player-title { font-size: 24px;}
+        }
+
+        @media screen and (min-width: 601px)  {
+            #play-url-uix { display: block; }  /* show it on large screens */
+            #player-title { font-size: 36px;} 
+        }
     </style>
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"
@@ -326,6 +346,7 @@
         */
 
         
+        
 
     </script>
 
@@ -346,12 +367,13 @@
 
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+                <li><a id="extended-info-menu" href="javascript:ExtendeInfo()">Hide Extended Info</a></li>
 			<!--<li><a href="http://www.mediagoom.com/blog">Blog</a></li>
 			-->
                     
-                    <li class="dropdown">
+                    <li class="dropdown hidden">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Static Player Samples <span class="caret"></span></a>
-			<ul class="dropdown-menu">
+			                <ul class="dropdown-menu">
 				<!--
                             <li><a href="javascript:HLS()">Hls</a></li>
 			    <li><a href="javascript:DASH()">Dash 1.4.0</a></li>
@@ -368,7 +390,7 @@
                             <li><a href="javascript:HLSFLASH()">Hls With Flash</a></li>
                             -->
 
-                        </ul>
+                            </ul>
                     </li>
 
 		    
@@ -383,7 +405,7 @@
 
         <div class="row">
             <div class="col-md-12 center">
-                <h1>Media Goom Sample Player</h1>
+                <h1 id="player-title">Media Goom Sample Player</h1>
             </div>
         </div>
 
@@ -404,15 +426,14 @@
             </div>
         </div>
 
-        <!--
-        <div class="row">
+        <!--PLAY URL-->
+        <div class="row" id="play-url-ui">
 
-            <div class="col-md-12 center">
-
+            <div class="col-md-12 center hidden-sm hidden-xs">
 
                 <div class="input-group">
                     <span class="input-group-addon" id="sizing-addon2">Content:</span>
-                    <input type="text" class="form-control" placeholder="" aria-describedby="sizing-addon2" id="playerurl" value="bb">
+                    <input type="text" class="form-control" placeholder="" aria-describedby="sizing-addon2" id="play-url" value="bb">
                     <span class="input-group-btn">
                         <button class="btn btn-default" type="button" onclick="playhere(true, options);">Play</button>
                     </span>
@@ -425,9 +446,30 @@
 
             </div>
         </div>
-        -->
 
+        <div class="row">
 
+                <div class="col-md-12 center">
+                </div>
+            </div>
+    
+
+        <!--INFO-->
+        <div class="row" id="extended-info">
+
+                <div class="col-md-1 col-sm-2 col-xs-5">
+                    <span class="label label-default">time</span><span class="label" id="play-time"></span>
+                </div>
+
+                <div class="col-md-1 col-sm-2 cols-xs-5">
+                    <span class="label label-default">duration</span><span class="label textinfo" id="play-duration"></span>
+                </div>
+
+                <div class="col-md-10 col-sm-8 col-xs-2"></div>
+        </div>
+    
+
+        <!--MODAL-->
         <div class="modal fade" id="media_test" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -489,8 +531,6 @@
                             </div>
                         </div>
 
-                        
-
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -504,7 +544,36 @@
      </div>
 
             <script>
+                
+                var g_player = null;
+                function twodigit(n){ return ("0" + n).slice(-2); }
+                function seconds2time(seconds)
+                {
+                    var hh = parseInt(  seconds / (60*60), 10);
+                    var mm = parseInt( (seconds % (60*60)) / 60 );
+                    var ss = parseInt( (seconds % (60*60)) % 60 ) ;
 
+                    return twodigit(hh) + ":" + twodigit(mm) + ":" + twodigit(ss);
+                }
+
+                function play(player, baseurl, info)
+                {
+                    g_player = player;
+
+                    g_player.on(player.events.STARTED, function(){
+                        
+                        $("#play-duration").text(seconds2time(g_player.duration));
+
+                    });
+
+                    g_player.on(player.events.URL, function(url){
+                        
+                        $("#play-url").val(url);
+
+                    });
+
+                    g_player.play(baseurl, info);
+                }
 
                 $(function () {
                    
@@ -550,7 +619,7 @@
                             
                             if(info.id)
                             {
-                                player.play(src, info);
+                                play(player, src, info);
                             }
                             else
                             {
@@ -565,18 +634,40 @@
                         //We have a specific player and a url
                         if (null != vplayer && src != null) {
                             info[vplayer] = src;
-                            player.play(location.href, info);
+                            play(player, location.href, info);
                         }
                         else
                         {
-                            //We just have a url. It should point to and info otherwise we do not no how to handle it.
-                            $.getJSON( src, function( data ) {
-                                player.play(src, info);
-                            });
+                            //We just have a url. 
+                            //let try to build an info
+
+                            info['dash'] = 'index.mpd';
+                            info['hls3'] = 'main.m3u8';
+
+                            play(player, src, info);
                         }
                     }
                 
                 });
+
+                function ExtendeInfo()
+                {
+                    var ui = $("#extended-info-menu");
+                    var div = $("#extended-info");
+
+                    var txt = ui.text();
+
+                    if("Hide Extended Info" == txt)
+                    {
+                        div.addClass('hidden');
+                        ui.text("Show Extended Info");
+                    }
+                    else
+                    {
+                        div.removeClass('hidden');
+                        ui.text("Hide Extended Info");
+                    }
+                }
 
             </script>
 
