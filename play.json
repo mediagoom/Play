@@ -5,9 +5,9 @@
             , "id" : "SintelBlob"
             ,"datetime":"2018-07-27T07:37:21.928Z","creationtime":"2018-07-26T13:59:34.929Z"
             ,"owner":"uploader"
-            ,"hls3":"https://defgroupdisks.blob.core.windows.net/builds/PLAY/STATIC/main.m3u8"
-            ,"dash":"https://defgroupdisks.blob.core.windows.net/builds/PLAY/STATIC/index.mpd"
-            ,"thumb":["https://defgroupdisks.blob.core.windows.net/builds/PLAY/img003.jpg"]
+            ,"hls3":"https://defgroupdisks.blob.core.windows.net/builds/SINTEL/STATIC/main.m3u8"
+            ,"dash":"https://defgroupdisks.blob.core.windows.net/builds/SINTEL/STATIC/index.mpd"
+            ,"thumb":["https://defgroupdisks.blob.core.windows.net/builds/SINTEL/img003.jpg"]
             ,"hls4":null
             ,"playready":null
             ,"widevine":null
@@ -18,9 +18,9 @@
            , "id" : "SintelLocal"
            ,"datetime":"2018-07-27T07:37:21.928Z","creationtime":"2018-07-26T13:59:34.929Z"
            ,"owner":"uploader"
-           ,"hls3":"http://localhost/video/002569741225_Sintel_2010_1080p_mkv/STATIC/main.m3u8"
-           ,"dash":"http://localhost/video/002569741225_Sintel_2010_1080p_mkv/STATIC/index.mpd"
-           ,"thumb":["http://localhost/video/002569741225_Sintel_2010_1080p_mkv/img003.jpg"]
+           ,"hls3":"http://localhost/mg/tmp/multi/join/main.m3u8"
+           ,"dash":"http://localhost/mg/tmp/multi/join/index.mpd"
+           ,"thumb":["http://localhost/mg/tmp/multi/join/img003.jpg"]
            ,"hls4":null
            ,"playready":null
            ,"widevine":null
