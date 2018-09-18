@@ -1,7 +1,7 @@
 {
   
-  "name": "mgplay",
-  "version": "0.0.3",
+  "name": "@mediagoom/play",
+  "version": "0.0.4",
   "description": "The mg player",
   "main": "index.js",
   "scripts": {
