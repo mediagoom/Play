@@ -23,5 +23,6 @@ deploy:
     tags: true
     repo: mediagoom/devman
     node: 8
+    
 
     
