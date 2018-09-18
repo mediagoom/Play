@@ -2,7 +2,7 @@
 
 const dbg = console.log
 
-var TEST_URL = 'https://defgroupdisks.blob.core.windows.net/builds/PLAY/STATIC';
+var TEST_URL = 'https://defgroupdisks.blob.core.windows.net/builds/SINTEL/STATIC';
 
 var started = null;
 var url = null;

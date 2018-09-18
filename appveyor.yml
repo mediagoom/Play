@@ -48,8 +48,8 @@ test_script:
 artifacts:
         - path: './index.html'
           name: index.html
-        - path: './play.html'
-          name: 'play.html'
+        - path: './start.html'
+          name: 'start.html'
         - path: './lib/bundle.js'
           name: 'bundle.js'
         - path: './lib/bundle.js.map'
@@ -73,7 +73,7 @@ deploy:
         secure: 7X0QuwNaLFt6pZbICyXLo4GLXRNkr81jQiyeyHty8JVewLab06xgRFb0O/lsefRnEEUyahuW4nbQ4eM0qciypNzxfsnyqUfpvbueZysU6DrFuejXQX8CCesOtlTjfKHE
     container: builds
     folder: PLAYER\$(APPVEYOR_BUILD_WORKER_IMAGE)\$(APPVEYOR_REPO_BRANCH)
-    artifact: index.html,play.html,bundle.js,bundle.js.map,MediaGoom.png,play.json
+    artifact: index.html,start.html,bundle.js,bundle.js.map,MediaGoom.png,play.json
     unzip: false
     set_content_type: true
 

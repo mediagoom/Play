@@ -10,7 +10,7 @@
     "karma": "node ./node_modules/karma/bin/karma start",
     "krun" : "karma run",
     "test": "node ./node_modules/karma/bin/karma start --single-run --no-auto-watch",
-    "localtest": "node ./node_modules/karma/bin/karma start --single-run --no-auto-watch --testuri=http://localhost/video/002569741225_Sintel_2010_1080p_mkv/STATIC",
+    "localtest": "node ./node_modules/karma/bin/karma start --single-run --no-auto-watch --testuri=http://localhost/mg/tmp/multi/STATIC",
     "souce": "node ./node_modules/karma/bin/karma start ./karma.conf.soucelabs.js",
     "package": "node ./node_modules/rollup/bin/rollup -c",
     "bundle": "node ./node_modules/rollup/bin/rollup -c"

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
@@ -7,7 +7,6 @@
     <title>MediaGoom Player</title>
    
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
-
 
     <style>
         body
@@ -36,11 +35,6 @@
             background-color: black;
         }
 
-        .linklist
-        {
-
-        }
-
         #logo
         {
             margin-top:-10px;
@@ -60,26 +54,63 @@
             margin-left: auto;
             margin-right: auto;
         }
+
+        .textinfo
+        {
+            color: black;
+        }
+
+        @media screen and (min-width: 0px) and (max-width: 250px) {
+            #play-url-uix { display: none; }  /* hide it elsewhere */
+            #player-title { font-size: 10px;}
+        }
+
+        @media screen and (min-width: 251px) and (max-width: 600px) {
+            #play-url-uix { display: none; }  /* hide it elsewhere */
+            #player-title { font-size: 24px;}
+        }
+
+        @media screen and (min-width: 601px)  {
+            #play-url-uix { display: block; }  /* show it on large screens */
+            #player-title { font-size: 36px;} 
+        }
     </style>
 
-<script src="https://code.jquery.com/jquery-1.12.4.min.js"
-integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+        crossorigin="anonymous"></script>
 
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<script crossorigin src="https://unpkg.com/dashjs@2.9.0/dist/dash.mediaplayer.min.js"></script>
+    <script crossorigin src="https://unpkg.com/dashjs@2.9.0/dist/dash.mediaplayer.min.js"></script>
 
-    
-    
-    
+    <script src="lib/bundle.js"></script>
+ 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    
+   
 </head>
 <body>
 
-    
+    <script>
+        
+        localStorage.debug = 'mgplay:*';
+               
+        
+        function getParamValuesByName(querystring, def) {
+            var qstring = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+            for (var i = 0; i < qstring.length; i++) {
+                var urlparam = qstring[i].split('=');
+                if (urlparam[0] == querystring) {
+                    return urlparam[1];
+                }
+            }
+
+            return def;
+        }
+      
+
+    </script>
+
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -97,32 +128,8 @@ crossorigin="anonymous"></script>
 
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-			<!--<li><a href="http://www.mediagoom.com/blog">Blog</a></li>
-			-->
-                    
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Static Player Samples <span class="caret"></span></a>
-			<ul class="dropdown-menu">
-				<!--
-                            <li><a href="javascript:HLS()">Hls</a></li>
-			    <li><a href="javascript:DASH()">Dash 1.4.0</a></li>
-			    
-			    <li><a href="javascript:DASH2()">Dash 2.3.0</a></li>
-			    --><!--
-			    <li><a href="FLASH.html">Flash </a></li>
-			    
-                            
-                            <li role="separator" class="divider"></li>
-
-                            <li><a href="javascript:HLSFLASH()">Hls With Flash</a></li>
-                            -->
-
-                        </ul>
-                    </li>
-
-		    
-
-                </ul>
+                    <li><a id="extended-info-menu" href="javascript:ExtendeInfo()">Show Extended Info</a></li>
+			    </ul>
                
             </div>
         </div>
@@ -132,21 +139,15 @@ crossorigin="anonymous"></script>
 
         <div class="row">
             <div class="col-md-12 center">
-                <h1>Media Goom Sample Player</h1>
+                <h1 id="player-title">Media Goom Sample Player</h1>
             </div>
         </div>
 
         <div class="row">
 
             <div class="col-md-12 center">
-                <div id="playerhost" class="linklist">
-                    <ul id="playlist" class="list-group">
-                        
-                        <li class="list-group-item">Dapibus ac facilisis in</li>
-                        <li class="list-group-item">Morbi leo risus</li>
-                        <li class="list-group-item">Porta ac consectetur ac</li>
-                        <li class="list-group-item">Vestibulum at eros</li>
-                      </ul>
+                <div id="playerhost" class="player">
+
                 </div>
 
             </div>
@@ -159,36 +160,188 @@ crossorigin="anonymous"></script>
             </div>
         </div>
 
+        <!--PLAY URL-->
+        <div class="row" id="play-url-ui">
+
+            <div class="col-md-12 center hidden-sm hidden-xs">
+
+                <div class="input-group">
+                    <span class="input-group-addon" id="sizing-addon2">Content:</span>
+                    <input type="text" class="form-control" placeholder="" aria-describedby="sizing-addon2" id="play-url" value="bb">
+                    <span class="input-group-btn hidden">
+                        <button class="btn btn-default" type="button" onclick="playhere(true, options);">Play</button>
+                    </span>
+
+                    <span class="input-group-btn hidden">
+                        <button class="btn btn-default" type="button" onclick='$("#media_test").modal("show");'>Configure</button>
+                    </span>
+          
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+
+                <div class="col-md-12 center">
+                </div>
+            </div>
+    
+
+        <!--INFO-->
+        <div class="row hidden" id="extended-info">
+
+                <div class="col-md-1 col-sm-2 col-xs-5">
+                    <span class="label label-default">time</span><span class="label textinfo" id="play-time"></span>
+                </div>
+
+                <div class="col-md-1 col-sm-2 cols-xs-5">
+                    <span class="label label-default">duration</span><span class="label textinfo" id="play-duration"></span>
+                </div>
+
+                <div class="col-md-10 col-sm-8 col-xs-2"></div>
+        </div>
+  
+    </div>
+
+   
+
+    <script>
         
+        var g_player = null;
+        function twodigit(n){ return ("0" + n).slice(-2); }
+        function seconds2time(seconds)
+        {
+            var hh = parseInt(  seconds / (60*60), 10);
+            var mm = parseInt( (seconds % (60*60)) / 60 );
+            var ss = parseInt( (seconds % (60*60)) % 60 ) ;
 
+            return twodigit(hh) + ":" + twodigit(mm) + ":" + twodigit(ss);
+        }
 
-        
+        function play(player, baseurl, info)
+        {
+            g_player = player;
 
+            g_player.on(player.events.STARTED, function(){
+                
+                $("#play-duration").text(seconds2time(g_player.duration));
 
-     </div>
+            });
 
-            <script>
+            g_player.on(player.events.URL, function(url){
+                
+                $("#play-url").val(url);
 
+            });
 
-                $(function () {
-                   
-                    $.getJSON( "play.json", function( data ) {
-                        var items = [];
-                        $.each( data.links, function( index, value ) {
-                            var info = JSON.stringify(value);
-                            items.push( "<li class='list-group-item'><a href='play.html?jsoninfo=" + value.id + "'>" + value.name + "</a></li>" );
-                        });
-                        
-                        var playerhost = $('#playlist');
-                            playerhost.html(items.join( "" ));
-                    });
-                        
+            g_player.play(baseurl, info);
+        }
+
+        $(function () {
+            
+            //options
+                                
+            var src = getParamValuesByName('src', 'play.json');
+            if(null != src)
+            {
+                src = src.replace(/%3D/g, '=');
+                src = src.replace(/%20/g, ' ');
+            }
+                
+            //var autouri   = getParamValuesByName('autouri');
+            //var encrypted = getParamValuesByName('encrypted');
+
+            var vplayer    = getParamValuesByName('player');
+            
+            var autoplay   = getParamValuesByName('autoplay', true);
+            var muted      = getParamValuesByName('muted', false);
+            var controls   = getParamValuesByName('controls', true);
+            
+            var jsoninfo   = getParamValuesByName('jsoninfo');
+
+            var info = {}
+            
+            var opt = { autoplay : new Boolean( autoplay )
+                , controls : new Boolean( controls )
+                , muted : new Boolean( muted )
+            };
+
+            var player = window.mgPlayer(opt);
+
+            if(null != jsoninfo)
+            {
+                $.getJSON( src, function( data ) {
+                    
+                    $.each( data.links, function( index, value ) {
+                            if(value.id === jsoninfo)
+                            {
+                                info = value;
+                            }
+                    });    
+                    
+                    if(info.id)
+                    {
+                        play(player, src, info);
+                    }
+                    else
+                    {
+                        console.error("invalid info", JSON.stringify(info));
+                    }
 
                 });
+        
+            }
+            else
+            {
+                //We have a specific player and a url
+                if (null != vplayer && src != null) {
+                    info[vplayer] = src;
+                    play(player, location.href, info);
+                }
+                else
+                {
+                    //We just have a url. 
+                    //let try to build an info
 
-            </script>
+                    info['dash'] = 'index.mpd';
+                    info['hls3'] = 'main.m3u8';
 
+                    play(player, src, info);
+                }
+            }
+        
+        });
 
+        var _timer = null;
 
-</body>
+        function ExtendeInfo()
+        {
+            var ui = $("#extended-info-menu");
+            var div = $("#extended-info");
+
+            var txt = ui.text();
+
+            if("Hide Extended Info" == txt)
+            {
+                div.addClass('hidden');
+                ui.text("Show Extended Info");
+
+                if(null != _timer)
+                    window.clearInterval(_timer);
+            }
+            else
+            {
+                div.removeClass('hidden');
+                ui.text("Hide Extended Info");
+
+                _timer = window.setInterval(function(){
+                    $("#play-time").text(seconds2time(g_player.time()));
+                }
+                , 1000);
+            }
+        }
+
+    </script>
+    </body>
 </html>
