@@ -1,7 +1,11 @@
 language: node_js
 dist: trusty
 addons:
-  chrome: stable
+  firefox: latest
+env:
+  - MOZ_HEADLESS=1
+addons:
+  
 node_js:
 - 10
 - 9
@@ -14,7 +18,7 @@ script:
 - npm install
 - npm run package
 - npm run bundle
-- npm test -- --browsers "SmallHeadlessChrome"
+- npm test -- --browsers "Firefox"
 after_script: 
 deploy:
 - provider: npm
