@@ -2,6 +2,7 @@ language: node_js
 dist: trusty
 addons:
   firefox: latest
+  chrome: latest
 env:
   - MOZ_HEADLESS=1
 addons:
@@ -18,7 +19,7 @@ script:
 - npm install
 - npm run package
 - npm run bundle
-- npm test -- --browsers "Firefox"
+- npm test -- --browsers "NoSandBoxHeadlessChrome"
 after_script: 
 deploy:
 - provider: npm

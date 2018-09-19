@@ -68,6 +68,10 @@ module.exports = function(config) {
         flags: ['--disable-translate', '--disable-extensions', '--remote-debugging-port=9222'
         , '--window-size=1412,1732']
       }
+      , NoSandBoxHeadlessChrome: {
+        base: 'SmallHeadlessChrome',
+        flags: ['--no-sandbox']
+      }
     }
 
     // start these browsers
