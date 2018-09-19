@@ -1,4 +1,7 @@
 language: node_js
+dist: trusty
+addons:
+  chrome: stable
 node_js:
 - 10
 - 9
@@ -11,7 +14,7 @@ script:
 - npm install
 - npm run package
 - npm run bundle
-- npm test -- --browsers "Firefox"
+- npm test -- --browsers "SmallHeadlessChrome"
 after_script: 
 deploy:
 - provider: npm
@@ -23,6 +26,6 @@ deploy:
     tags: true
     repo: mediagoom/devman
     node: 8
-    
+
 
     

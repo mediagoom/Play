@@ -1,8 +1,19 @@
-param([bool] $filter = $true, [string] $prefix = "./saucelab")
+param([bool] $filter = $true, [string] $prefix = "./saucelab"
+, [string] $csv = $null)
 
-$b = Invoke-RestMethod 'https://saucelabs.com/rest/v1/info/browsers/webdriver'
+if($null -eq $csv)
+{
 
-$b | out-file "browserlist.tmp" -encoding ascii;
+    $b = Invoke-RestMethod 'https://saucelabs.com/rest/v1/info/browsers/webdriver'
+
+    #$b | out-file "browserlist.tmp" -encoding ascii;
+    $b | export-csv "browserlist.csv"
+}
+else
+{
+    $filter = $false;
+    $b = import-csv $csv
+}
 
 $j = @();
 
@@ -106,7 +117,7 @@ for($i = 0; $i -lt ($max + 1); $i++)
     function do_test(`$envvar, `$progress){
         `$env:SAUCE_SELENIUM_BROWSER="`$envvar";
         #`$res = node .\index.js;
-        `$proc = Start-Process -filePath 'node.exe' -ArgumentList './index.js' -RedirectStandardOutput stdout.txt -RedirectStandardError stderr.txt -PassThru
+        `$proc = Start-Process -WindowStyle hidden -filePath 'node.exe' -ArgumentList './index.js' -RedirectStandardOutput stdout.txt -RedirectStandardError stderr.txt -PassThru
         `$proc | Wait-Process -Timeout 600 -ErrorAction 0 -ErrorVariable timeouted
         #if(0 -ne `$LASTEXITCODE)
 

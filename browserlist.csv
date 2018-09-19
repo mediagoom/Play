@@ -1,0 +1,43 @@
+#TYPE System.Management.Automation.PSCustomObject,,,,,,,
+short_version,long_name,api_name,long_version,device,latest_stable_version,automation_backend,os
+latest,Firefox,firefox,latest,,,webdriver,Mac 10.12
+latest-1,Firefox,firefox,latest-1,,,webdriver,Mac 10.12
+latest-2,Firefox,firefox,latest-2,,,webdriver,Mac 10.12
+latest,Firefox,firefox,latest,,,webdriver,Mac 10.13
+latest-1,Firefox,firefox,latest-1,,,webdriver,Mac 10.13
+latest-2,Firefox,firefox,latest-2,,,webdriver,Mac 10.13
+latest,Firefox,firefox,latest,,,webdriver,Linux
+latest-1,Firefox,firefox,latest-1,,,webdriver,Linux
+latest-2,Firefox,firefox,latest-2,,,webdriver,Linux
+latest,Firefox,android,latest,,,webdriver,Linux
+latest,Firefox,ipad,latest,,,webdriver,Mac 10.13
+latest,Firefox,iphone,latest,,,webdriver,Mac 10.13
+latest,Firefox,chrome,latest,,,webdriver,Mac 10.12
+latest-1,Firefox,chrome,latest-1,,,webdriver,Mac 10.12
+latest-2,Firefox,chrome,latest-2,,,webdriver,Mac 10.12
+latest,Firefox,chrome,latest,,,webdriver,Mac 10.13
+latest-1,Firefox,chrome,latest-1,,,webdriver,Mac 10.13
+latest-2,Firefox,chrome,latest-2,,,webdriver,Mac 10.13
+latest,Firefox,chrome,latest,,,webdriver,Linux
+latest-1,Firefox,chrome,latest-1,,,webdriver,Linux
+latest-2,Firefox,chrome,latest-2,,,webdriver,Linux
+latest,Firefox,firefox,latest,,,webdriver,Windows 10
+latest-1,Firefox,firefox,latest-1,,,webdriver,Windows 10
+latest-2,Firefox,firefox,latest-2,,,webdriver,Windows 10
+latest,Firefox,chrome,latest,,,webdriver,Windows 10
+latest-1,Firefox,chrome,latest-3,,,webdriver,Windows 10
+latest-2,Firefox,chrome,latest-4,,,webdriver,Windows 10
+latest,Firefox,MicrosoftEdge,latest,,,webdriver,Windows 10
+latest-1,Firefox,MicrosoftEdge,latest-5,,,webdriver,Windows 10
+latest-2,Firefox,MicrosoftEdge,latest-6,,,webdriver,Windows 10
+latest,Firefox,internet explorer,latest,,,webdriver,Windows 10
+latest,Firefox,internet explorer,latest,,,webdriver,Windows 2008
+latest-1,Firefox,internet explorer,latest,,,webdriver,Windows 2008
+latest-2,Firefox,internet explorer,latest,,,webdriver,Windows 2008
+latest-3,Firefox,internet explorer,latest,,,webdriver,Windows 2008
+latest,Safari,safari,11.1.,,,webdriver,Mac 10.13
+latest,Safari,safari,9.0.,,,webdriver,Mac 10.11
+latest,Safari,safari,10.1.,,,webdriver,Mac 10.12
+latest-1,Safari,safari,10.0.,,,webdriver,Mac 10.11
+latest,Safari,safari,11.0.,,,webdriver,Mac 10.12
+latest,Safari,safari,8.0.,,,webdriver,Mac 10.10
