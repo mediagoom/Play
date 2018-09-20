@@ -1,14 +1,13 @@
 {
-  
   "name": "@mediagoom/play",
   "version": "0.0.5",
   "description": "The mg player",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "start": "devman",
     "serve": "http-server -o",
     "karma": "node ./node_modules/karma/bin/karma start",
-    "krun" : "karma run",
+    "krun": "karma run",
     "test": "node ./node_modules/karma/bin/karma start --single-run --no-auto-watch",
     "localtest": "node ./node_modules/karma/bin/karma start --single-run --no-auto-watch --testuri=http://localhost/mg/tmp/multi/STATIC",
     "souce": "node ./node_modules/karma/bin/karma start ./karma.conf.soucelabs.js",
