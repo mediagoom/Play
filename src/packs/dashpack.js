@@ -1,4 +1,4 @@
-import {basepack, PLAYEVENT} from "./basepack.js";
+import {basepack/*, PLAYEVENT*/} from './basepack.js';
 import dashjs from 'dashjs';
 
 function dodash(myself,    src
@@ -13,7 +13,7 @@ function dodash(myself,    src
     myself.dashplayer = dashjs.MediaPlayer().create();
     
      
-    var elem = document.querySelector("#" + id);
+    var elem = document.querySelector('#' + id);
 
     if (null == autoplay)
         autoplay = false;
@@ -39,7 +39,7 @@ function dodash(myself,    src
 
 export default class dashpack  extends basepack {
 
-    constructor(options) {
+    constructor(/*options*/) {
         super();
 
         this.dashplayer = null;
@@ -67,7 +67,7 @@ export default class dashpack  extends basepack {
 
     get name()
     {
-        return "dashjs";
+        return 'dashjs';
     }
 
 

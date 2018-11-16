@@ -1,15 +1,15 @@
-import { EventEmitter } from "events";
+import { EventEmitter } from 'events';
 
 const PACKEVENT = Object.freeze({
-      STARTED:  "started",
-      ERROR:  "error"
+    STARTED:  'started'
+    ,ERROR:  'error'
 });
 
 const PLAYEVENT = Object.freeze({
-    STARTED:   "started",
-    ERROR:  "error",
-    PLAYER: "player",
-    URL: "url"
+    STARTED:   'started'
+    ,ERROR:  'error'
+    ,PLAYER: 'player'
+    ,URL: 'url'
 });
 
 class basepack extends EventEmitter{
@@ -22,4 +22,4 @@ class basepack extends EventEmitter{
     }
 }
 
-export {basepack, PLAYEVENT}
+export {basepack, PLAYEVENT};

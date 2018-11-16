@@ -14,8 +14,9 @@ branches:
   except:
   - dev-wia
 before_install: 
-script:
+install:
 - npm install
+script:
 - npm run package
 - npm run bundle
 - npm test -- --browsers "NoSandBoxHeadlessChrome"

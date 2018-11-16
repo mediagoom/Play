@@ -1,5 +1,8 @@
 {
   "name": "@mediagoom/play",
+  "publishConfig": {
+    "access": "public"
+  },
   "version": "0.0.5",
   "description": "The mg player",
   "main": "lib/index.js",
@@ -10,9 +13,9 @@
     "krun": "karma run",
     "test": "node ./node_modules/karma/bin/karma start --single-run --no-auto-watch",
     "localtest": "node ./node_modules/karma/bin/karma start --single-run --no-auto-watch --testuri=http://localhost/mg/tmp/multi/STATIC",
-    "souce": "node ./node_modules/karma/bin/karma start ./karma.conf.soucelabs.js",
     "package": "node ./node_modules/rollup/bin/rollup -c",
-    "bundle": "node ./node_modules/rollup/bin/rollup -c"
+    "bundle": "node ./node_modules/rollup/bin/rollup -c",
+    "lint": "eslint ./*//*.js"
   },
   "repository": {
     "type": "git",
@@ -37,16 +40,17 @@
     "@mediagoom/devman": "0.0.6",
     "babel-cli": "^6.26.0",
     "chai": "^3.5.0",
+    "eslint": "^5.9.0",
     "exorcist": "^1.0.1",
-    "http-server": "^0.9.0",
-    "karma": "^2.0.5",
+    "http-server": "^0.11.1",
+    "karma": "^3.1.1",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^2.0.0",
     "karma-edge-launcher": "^0.4.0",
     "karma-firefox-launcher": "^1.1.0",
     "karma-ie-launcher": "^1.0.0",
     "karma-mocha": "^1.3.0",
-    "mocha": "^3.2.0",
+    "mocha": "^5.2.0",
     "rollup": "^0.65.0",
     "rollup-plugin-babel": "4.0.2",
     "rollup-plugin-commonjs": "^9.1.6",

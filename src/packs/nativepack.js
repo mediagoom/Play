@@ -1,4 +1,4 @@
-import {basepack, PLAYEVENT} from "./basepack.js";
+import {basepack, PLAYEVENT} from './basepack.js';
 
 function dovideo(myself,    src
     , id, autoplay)
@@ -7,7 +7,7 @@ function dovideo(myself,    src
     
     
         
-    myself.videoplayer = document.querySelector("#" + id);
+    myself.videoplayer = document.querySelector('#' + id);
     myself.videoplayer.src = url;
     
 
@@ -73,7 +73,7 @@ export default class videopack extends basepack {
 
     get name()
     {
-        return "html5";
+        return 'html5';
     }
 
 
