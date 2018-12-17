@@ -11,3 +11,4 @@ browserlist*
 web.config
 *~
 /img/*
+/lib

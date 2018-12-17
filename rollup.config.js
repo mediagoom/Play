@@ -19,7 +19,15 @@ const gplugins = [
     , babel({
         exclude: 'node_modules/**'
         , babelrc: false
-        , presets: [['@babel/env', { modules: false }]]
+        , presets: [['@babel/env',  { 
+            modules: false 
+            , 'targets': {
+                'chrome': '58'
+                ,'ie': '11'
+            }
+            , forceAllTransforms: true
+            , useBuiltIns: 'usage'
+        }]]
         , plugins: ['@babel/plugin-transform-object-assign']
         //, externalHelpers: true
     })
@@ -58,5 +66,5 @@ export default [
 
         , plugins: gplugins
     }
-,]
+    ,]
 ;
