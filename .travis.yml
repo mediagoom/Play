@@ -29,7 +29,7 @@ deploy:
     secure: n0BJEFLlQpqVVah2lPHzXp6mfa8qw6iMsJ1z3YhR0SIULPOSZnjbsddEOfm0FY8RKdHtL4M+/dcx54szMvZ0476Ls59GRSfA5M0cpY++QIGE6iIGD3EAIeDSgk8jRO7Kzh9B93W7AdZXFG8KK9i8/GdugbBe5/UIeFZajh4YnyKgWfV6TLTNRJ8bjXTflkRSlnwJ/QFMggjjBKo4fBa/vLe3Izc6SI05jy8Al3d+5nEWWZnw99uu4fSSIM5qeYYf2Fh3HtneKJVKOxySiiAyyp8OFIGwoVct4x/TWuKt4F0tMkMqQ5Ml2tsA+eR8FlfKK5VrdN6fl130lJBkWO2WN2jLVHvuPUwNpusriqGFDR8I7nBKHEpndu8EXLdjrmwHLGELUsy0bDcCBVwvFwSco12alZUjjWyF6UYnyjj2utvmrHXOsLw4yM++vQBnsrHO8v48laTmjlmC6MQJWQ/Z+ujka7qKUhWXyeLf5yin2B6gB3LVdvuDphfEZqyTYuM9gjBnBxUnieUuvx0pOTt5Bn0H7YKNNUp9nqrsikrHWr0MVcheDwHYWsPN1J9pt9nCQPV2AhNNCOHW2MyMX2Pnr+xg2Jgzldc4HqQq5B76rxiUj6MLoQVKqKW+ExGvsX6nSWvW0zxOvvC1wFwYgtPREOEvo19insR+dOm765uN4Cs=
   on:
     tags: true
-    repo: mediagoom/play
+    repo: mediagoom/Play
     node: 8
 
 
